@@ -2,14 +2,14 @@
 <html lang="zh">
 
 	<head>
-		<meta charset="gbk">
+		<meta charset="UTF-8">
 		<title>Hello MUI</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<!--±ê×¼mui.css-->
+		<!--æ ‡å‡†mui.css-->
 		<link rel="stylesheet" href="css/mui.min.css">
-		<!--App×Ô¶¨ÒåµÄcss-->
+		<!--Appè‡ªå®šä¹‰çš„css-->
 		<style type="text/css">
 			.mui-preview-image.mui-fullscreen {
 				position: fixed;
@@ -179,25 +179,25 @@
 	<body>
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">image viewer£¨Í¼Æ¬Ô¤ÀÀ£©</h1>
+			<h1 class="mui-title">image viewerï¼ˆå›¾ç‰‡é¢„è§ˆï¼‰</h1>
 		</header>
 		<div class="mui-content">
 			<div class="mui-content-padded">
-				<p>ÕâÊÇÍ¼Æ¬·Å´óÔ¤ÀÀÊ¾Àı£¬µã»÷ÈçÏÂÍ¼Æ¬ÌåÑéÈ«ÆÁÔ¤ÀÀ¹¦ÄÜ</p>
+				<p>è¿™æ˜¯å›¾ç‰‡æ”¾å¤§é¢„è§ˆç¤ºä¾‹ï¼Œç‚¹å‡»å¦‚ä¸‹å›¾ç‰‡ä½“éªŒå…¨å±é¢„è§ˆåŠŸèƒ½</p>
 				<p>
 					<img src="images/1.jpg" data-preview-src="" data-preview-group="1" />
 				</p>
 			</div>
 			<div class="mui-content-padded">
-			    <p>Õâ¸öÊÇµÚ¶ş×é</p>
+			    <p>è¿™ä¸ªæ˜¯ç¬¬äºŒç»„</p>
 				<p>
 					<img src="images/class.jpg" data-preview-src="" data-preview-group="2" data-content="group2_No1"/>
 				</p>
-				<p>Í¼Æ¬È«ÆÁºó£¬Ë«»÷»òË«Ö¸Ëõ·Å¾ù¿É¶ÔÍ¼Æ¬½øĞĞ·Å´ó¡¢ËõĞ¡²Ù×÷£¬×óÓÒ»¬¶¯¿É²é¿´Í¬×é(data-preview-groupÏàÍ¬µÄÍ¼Æ¬ÎªÒ»×é)ÆäËüÍ¼Æ¬£¬µã»÷»á¹Ø±ÕÔ¤ÀÀ</p>
+				<p>å›¾ç‰‡å…¨å±åï¼ŒåŒå‡»æˆ–åŒæŒ‡ç¼©æ”¾å‡å¯å¯¹å›¾ç‰‡è¿›è¡Œæ”¾å¤§ã€ç¼©å°æ“ä½œï¼Œå·¦å³æ»‘åŠ¨å¯æŸ¥çœ‹åŒç»„(data-preview-groupç›¸åŒçš„å›¾ç‰‡ä¸ºä¸€ç»„)å…¶å®ƒå›¾ç‰‡ï¼Œç‚¹å‡»ä¼šå…³é—­é¢„è§ˆ</p>
 				<p>
 					<img src="images/m1.jpg" data-preview-src="" data-preview-group="2" />
 				</p>
-				<p>µÚÈıÕÅÍ¼Æ¬£¬´¿´âÎªÁËÕ¼Î»£º </p>
+				<p>ç¬¬ä¸‰å¼ å›¾ç‰‡ï¼Œçº¯ç²¹ä¸ºäº†å ä½ï¼š </p>
 				<p>
 					<img src="images/class.jpg" data-preview-src="" data-preview-group="2"  data-content="group2_No3"/>
 				</p>
@@ -223,7 +223,7 @@
         function lazyload() {
 	    var images = document.getElementsByTagName('img');
 	    var len    = images.length;
-	    var n      = 0;      //´æ´¢Í¼Æ¬¼ÓÔØµ½µÄÎ»ÖÃ£¬±ÜÃâÃ¿´Î¶¼´ÓµÚÒ»ÕÅÍ¼Æ¬¿ªÊ¼±éÀú		
+	    var n      = 0;      //å­˜å‚¨å›¾ç‰‡åŠ è½½åˆ°çš„ä½ç½®ï¼Œé¿å…æ¯æ¬¡éƒ½ä»ç¬¬ä¸€å¼ å›¾ç‰‡å¼€å§‹éå†		
 	    return function() {
 		var seeHeight = document.documentElement.clientHeight;
 		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -238,7 +238,7 @@
 	    }
 	}
 	var loadImages = lazyload();
-	loadImages();          //³õÊ¼»¯Ê×Ò³µÄÒ³ÃæÍ¼Æ¬
+	loadImages();          //åˆå§‹åŒ–é¦–é¡µçš„é¡µé¢å›¾ç‰‡
 	window.addEventListener('scroll', loadImages, false);
     </script>
 
