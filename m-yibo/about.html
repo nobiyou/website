@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="gbk">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<script src="js/flexible.min.js"></script>
+		<link rel="stylesheet" href="css/mui.min.rem.css">
+		<link rel="stylesheet" href="css/iconfont.css">
+		<script src="css/iconfont.js"></script>
+		<link rel="stylesheet" href="css/index.css">
+		<title>艺博教育网——专注中国家庭教育</title>
+	</head>
+
+	<body>
+		<nav class="mui-bar mui-bar-tab bottom-menu">
+			<a href="index.html" class="mui-tab-item">
+				<span class="mui-icon icon iconfont icon-shouye"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a href="daidong.html" class="mui-tab-item" >
+				<span class="mui-icon icon iconfont icon-daidong"></span>
+				<span class="mui-tab-label">戴东专栏</span>
+			</a>
+			<a href="class-video.html" class="mui-tab-item" >
+				<span class="mui-icon icon iconfont icon-shiping"></span>
+				<span class="mui-tab-label">课程视频</span>
+			</a>
+			<a href="feedback.html" class="mui-tab-item" >
+				<span class="mui-icon icon iconfont icon-zixun"></span>
+				<span class="mui-tab-label">在线咨询</span>
+			</a>
+			<a href="about.html" class="mui-tab-item mui-active">
+				<span class="mui-icon icon iconfont icon-xin"></span>
+				<span class="mui-tab-label">关于我们</span>
+			</a>
+		</nav>
+		<div class="mui-content about">
+			<div class="mui-banner">
+				<div class="mui-banner-pic">
+					<span class="icon iconfont icon-logo"></span>
+					<img src="images/about.jpg" />
+				</div>
+
+			</div>
+			<div class="index-page index-list">
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell mui-media">
+						<a href="zhongbang.html" class="mui-navigate-right">
+							<span class="icon iconfont icon-zhongbang mui-pull-left"></span>
+							<div class="mui-media-body">艺博重磅</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="xueyuan-wenzhang.html" class="mui-navigate-right">
+							<span class="icon iconfont icon-chanpin mui-pull-left"></span>
+							<div class="mui-media-body">产品价值</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="team.html" class="mui-navigate-right">
+							<span class="icon iconfont icon-tuandui mui-pull-left"></span>
+							<div class="mui-media-body">管理团队</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="index-page index-list mt10">
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell mui-media">
+						<a href="book-list.html" class="mui-navigate-right">
+							<span class="icon iconfont icon-shuji mui-pull-left"></span>
+							<div class="mui-media-body">书籍作品</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="list.html" class="mui-navigate-right">
+							<span class="icon iconfont icon-weikan mui-pull-left"></span>
+							<div class="mui-media-body">艺博微刊</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="index-page index-list mt10">
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell mui-media">
+						<a href="yibo.html" class="mui-navigate-right">
+							<span class="icon iconfont icon-about mui-pull-left"></span>
+							<div class="mui-media-body">了解艺博</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mui-card ad-class">
+				<h3><span class="icon iconfont icon-kechengbiao"></span> 艺博教育全国课程安排表</h3>
+				<p>了解最新的课程动态</p>
+				<a href="kechengbiao.html" class=" mui-btn more">查看课程</a>
+			</div>
+			<div class="mui-card user">
+				<div class="mui-segmented-control">
+					<a href="reg.html" class="mui-control-item"><span class="icon iconfont icon-suo"></span> 注册</a>
+					<a href="login.html" class="mui-control-item"><span class="icon iconfont icon-key"></span> 登陆</a>
+				</div>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			//获得slider插件对象
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+				interval: 5000 //自动轮播周期，若为0则不自动播放，默认为0；
+			});
+			mui('.bottom-menu').on('tap', 'a', function() {
+				document.location.href = this.href;
+			});
+			mui('.mui-segmented-control').on('tap', 'a', function() {
+				document.location.href = this.href;
+			});
+		</script>
+
+	</body>
+
+</html>
