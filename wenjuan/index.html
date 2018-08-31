@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title></title>
+		<script src="http://www.yibo365.cn/statics/2017-red/js/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" href="wenjuan.css" />
+	</head>
+
+	<body>
+		<div class="content">
+			<div class="header">
+				<h3>问卷调查表</h3>
+				<img src="images/wj_01.jpg" />
+			</div>
+			<div class="conter" id="item1mobile">
+				<div class="faq">
+					<div class="faq-title">
+						<i class="faq-num">12</i>
+						<p>当孩子对您说起一件令他得意的事时，您却警告他别骄傲；</p>
+					</div>
+					<div class="faq-checkbox">
+						<label class="m-radio m-radio--solid m-radio--state-success">
+							<input type="radio" name="faq-list" value="yes"> 是
+							<span></span>
+						</label>
+						<label class="m-radio m-radio--solid m-radio--state-brand">
+							<input type="radio" name="faq-list" value="no"> 否
+							<span></span>
+						</label>
+					</div>
+				</div>
+				<div class="faq-sum"><span class="a-sum"> 12</span> /<span class="b-sum"> 40</span></div>
+				<div class="sub-next">
+					<div class="m-btn-group btn-group Previous" role="group" >
+					    <button type="button" class="m-btn btn btn-warning">上一题</button>
+					</div>
+					<div class="m-btn-group btn-group next" role="group" >
+					    <button type="button" class="m-btn btn btn-warning">下一题</button>
+					</div>
+					<div class="m-btn-group btn-group submit" role="group" >
+					    <button type="button" class="m-btn btn btn-info">提交问卷</button>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<p class="copy">最终解析权归甘肃艺博教育文化传播股份有限公司所有</p>
+				<img src="images/wj_03.jpg" />
+			</div>
+		</div>
+		<script>
+			var div = document.getElementById('item1mobile');
+			var header = document.getElementsByClassName('header')[0].clientHeight;
+			//alert(document.getElementsByClassName('header')[0].clientHeight);
+			var footer = document.getElementsByClassName('footer')[0].clientHeight;
+			//alert(document.getElementsByClassName('footer')[0].clientHeight);
+			var cHeight_div = document.documentElement.clientHeight;
+			var cHeight = cHeight_div - header - footer -30;
+			div.style.height = cHeight + 'px';
+		</script>
+
+	</body>
+
+</html>
