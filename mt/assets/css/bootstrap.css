@@ -1763,6 +1763,46 @@ fieldset:disabled a.btn {
 	pointer-events: none
 }
 
+.btn-brand {
+	color: #fff;
+	background-color: #f3990f;
+	border-color: #f3990f
+}
+
+.btn-brand:hover {
+	color: #fff;
+	background-color: #564ec0;
+	border-color: #4d44bd
+}
+
+.btn-brand:focus,
+.btn-brand.focus {
+	-webkit-box-shadow: 0 0 0 .2rem rgba(113, 106, 202, 0.5);
+	box-shadow: 0 0 0 .2rem rgba(113, 106, 202, 0.5)
+}
+
+.btn-brand.disabled,
+.btn-brand:disabled {
+	color: #fff;
+	background-color: #f3990f;
+	border-color: #f3990f
+}
+
+.btn-brand:not(:disabled):not(.disabled):active,
+.btn-brand:not(:disabled):not(.disabled).active,
+.show>.btn-brand.dropdown-toggle {
+	color: #fff;
+	background-color: #4d44bd;
+	border-color: #4940b4
+}
+
+.btn-brand:not(:disabled):not(.disabled):active:focus,
+.btn-brand:not(:disabled):not(.disabled).active:focus,
+.show>.btn-brand.dropdown-toggle:focus {
+	-webkit-box-shadow: 0 0 0 .2rem rgba(113, 106, 202, 0.5);
+	box-shadow: 0 0 0 .2rem rgba(113, 106, 202, 0.5)
+}
+
 .btn-primary {
 	color: #fff;
 	background-color: #5867dd;
