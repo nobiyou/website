@@ -5,32 +5,22 @@
 	<head>
 		<meta charset="utf-8" />
 
-		<title>Metronic | Dashboard</title>
+		<title>RESS管理系统</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 
 		<!--begin::Web font -->
-		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-		<script>
-			WebFont.load({
-				google: {
-					"families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]
-				},
-				active: function() {
-					sessionStorage.fonts = true;
-				}
-			});
-		</script>
+		<link href="assets/vendors/base/ress-font.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="assets/vendors/base/ress-font.js"></script>
 		<!--end::Web font -->
-
+		
 		<!--begin::Base Styles -->
-		<link href="css/vendors.bundle.css" rel="stylesheet" type="text/css" />
-
-		<link href="css/style.bundle.css" rel="stylesheet" type="text/css" />
-
+		<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="assets/css/responsive-style.css">
 		<!--end::Base Styles -->
 
-		<link rel="shortcut icon" href="img/logo/favicon.ico" />
+		<link rel="shortcut icon" href="assets/img/logo/favicon.ico" />
 	</head>
 	<!-- end::Head -->
 
@@ -50,7 +40,7 @@
 							<div class="m-stack m-stack--ver m-stack--general">
 								<div class="m-stack__item m-stack__item--middle m-brand__logo">
 									<a href="index.html" class="m-brand__logo-wrapper">
-										<img alt="" src="assets/demo/default/media/img/logo/logo_default_dark.png" />
+										<img alt="" src="assets/img/logo/logo_default_dark.png" />
 									</a>
 								</div>
 								<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -90,7 +80,7 @@
 								<ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
 									<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" m-menu-submenu-toggle="click" m-menu-link-redirect="1" aria-haspopup="true">
 										<a href="javascript:;" class="m-menu__link m-menu__toggle">
-											<i class="m-menu__link-icon flaticon-add"></i>
+											<i class="m-menu__link-icon ress ress-xitongshiti"></i>
 											<span class="m-menu__link-title">
 												<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
@@ -108,7 +98,7 @@
 									</li>
 									<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" m-menu-submenu-toggle="click" m-menu-link-redirect="1" aria-haspopup="true">
 										<a href="javascript:;" class="m-menu__link m-menu__toggle">
-											<i class="m-menu__link-icon flaticon-line-graph"></i>
+											<i class="m-menu__link-icon ress ress-drgspingtairuanjianxitong39"></i>
 											<span class="m-menu__link-title">
 												<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
@@ -121,7 +111,7 @@
 									</li>
 									<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" m-menu-submenu-toggle="click" m-menu-link-redirect="1" aria-haspopup="true">
 										<a href="javascript:;" class="m-menu__link m-menu__toggle">
-											<i class="m-menu__link-icon flaticon-paper-plane"></i>
+											<i class="m-menu__link-icon ress ress-system-statu"></i>
 											<span class="m-menu__link-title">
 												<span class="m-menu__link-wrap">
 													<span class="m-menu__link-text">
@@ -143,7 +133,7 @@
 										<li class="m-nav__item m-dropdown m-dropdown--large m-dropdown--arrow m-dropdown--align-center m-dropdown--mobile-full-width m-dropdown--skin-light	m-list-search m-list-search--skin-light" m-dropdown-toggle="click" id="m_quicksearch" m-quicksearch-mode="dropdown" m-dropdown-persistent="1">
 
 											<a href="#" class="m-nav__link m-dropdown__toggle">
-												<span class="m-nav__link-icon"><i class="flaticon-search-1"></i></span>
+												<span class="m-nav__link-icon"><i class="ress ress-sousuo"></i></span>
 											</a>
 											<div class="m-dropdown__wrapper">
 												<span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
@@ -155,7 +145,7 @@
 							<input id="m_quicksearch_input" autocomplete="off" type="text" name="q" class="m-list-search__form-input" value="" placeholder="Search...">
 						</span>
 																<span class="m-list-search__form-icon-close" id="m_quicksearch_close">
-							<i class="la la-remove"></i>
+							<i class="ress ress-guanbi"></i>
 						</span>
 															</div>
 														</form>
@@ -172,12 +162,12 @@
 										<li class="m-nav__item m-topbar__notifications m-topbar__notifications--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-center 	m-dropdown--mobile-full-width" m-dropdown-toggle="click" m-dropdown-persistent="1">
 											<a href="#" class="m-nav__link m-dropdown__toggle" id="m_topbar_notification_icon">
 												<span class="m-nav__link-badge m-badge m-badge--dot m-badge--dot-small m-badge--danger"></span>
-												<span class="m-nav__link-icon"><i class="flaticon-music-2"></i></span>
+												<span class="m-nav__link-icon"><i class="ress ress-lingdang"></i></span>
 											</a>
 											<div class="m-dropdown__wrapper">
 												<span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
 												<div class="m-dropdown__inner">
-													<div class="m-dropdown__header m--align-center" style="background: url(assets/app/media/img/misc/notification_bg.jpg); background-size: cover;">
+													<div class="m-dropdown__header m--align-center" style="background: url(assets/img/misc/notification_bg.jpg); background-size: cover;">
 														<span class="m-dropdown__header-title">9条新消息</span>
 														<span class="m-dropdown__header-subtitle">用户通知</span>
 													</div>
@@ -299,12 +289,12 @@
 										<li class="m-nav__item m-topbar__quick-actions m-topbar__quick-actions--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push m-dropdown--mobile-full-width m-dropdown--skin-light" m-dropdown-toggle="click">
 											<a href="#" class="m-nav__link m-dropdown__toggle">
 												<span class="m-nav__link-badge m-badge m-badge--dot m-badge--info m--hide"></span>
-												<span class="m-nav__link-icon"><i class="flaticon-share"></i></span>
+												<span class="m-nav__link-icon"><i class="ress ress-fenxiang"></i></span>
 											</a>
 											<div class="m-dropdown__wrapper">
 												<span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
 												<div class="m-dropdown__inner">
-													<div class="m-dropdown__header m--align-center" style="background: url(assets/app/media/img/misc/quick_actions_bg.jpg); background-size: cover;">
+													<div class="m-dropdown__header m--align-center" style="background: url(assets/img/misc/quick_actions_bg.jpg); background-size: cover;">
 														<span class="m-dropdown__header-title">快捷入口</span>
 														<span class="m-dropdown__header-subtitle">资源文件上传</span>
 													</div>
@@ -314,21 +304,21 @@
 																<div class="m-nav-grid m-nav-grid--skin-light">
 																	<div class="m-nav-grid__row">
 																		<a href="#" class="m-nav-grid__item">
-																			<i class="m-nav-grid__icon flaticon-file"></i>
+																			<i class="m-nav-grid__icon ress ress-tupian"></i>
 																			<span class="m-nav-grid__text">图片上传</span>
 																		</a>
 																		<a href="#" class="m-nav-grid__item">
-																			<i class="m-nav-grid__icon flaticon-time"></i>
+																			<i class="m-nav-grid__icon ress ress-shipin"></i>
 																			<span class="m-nav-grid__text">视频上传</span>
 																		</a>
 																	</div>
 																	<div class="m-nav-grid__row">
 																		<a href="#" class="m-nav-grid__item">
-																			<i class="m-nav-grid__icon flaticon-folder"></i>
+																			<i class="m-nav-grid__icon ress ress-yinle"></i>
 																			<span class="m-nav-grid__text">音频上传</span>
 																		</a>
 																		<a href="#" class="m-nav-grid__item">
-																			<i class="m-nav-grid__icon flaticon-clipboard"></i>
+																			<i class="m-nav-grid__icon ress ress-wenjianjia1"></i>
 																			<span class="m-nav-grid__text">文件上传</span>
 																		</a>
 																	</div>
@@ -343,17 +333,17 @@
 										<li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" m-dropdown-toggle="click">
 											<a href="#" class="m-nav__link m-dropdown__toggle">
 												<span class="m-topbar__userpic">	
-		<img src="assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless" alt=""/>
+		<img src="assets/img/users/user4.jpg" class="m--img-rounded m--marginless" alt=""/>
 	</span>
 												<span class="m-topbar__username m--hide">用户名</span>
 											</a>
 											<div class="m-dropdown__wrapper">
 												<span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
 												<div class="m-dropdown__inner">
-													<div class="m-dropdown__header m--align-center" style="background: url(assets/app/media/img/misc/user_profile_bg.jpg); background-size: cover;">
+													<div class="m-dropdown__header m--align-center" style="background: url(assets/img/misc/user_profile_bg.jpg); background-size: cover;">
 														<div class="m-card-user m-card-user--skin-dark">
 															<div class="m-card-user__pic">
-																<img src="assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless" alt="" />
+																<img src="assets/img/users/user4.jpg" class="m--img-rounded m--marginless" alt="" />
 																<!--
 						<span class="m-type m-type--lg m--bg-danger"><span class="m--font-light">S<span><span>
 						-->
@@ -371,7 +361,7 @@
 																	<span class="m-nav__section-text">Section</span>
 																</li>
 																<li class="m-nav__item">
-																	<a href="header/profile.html" class="m-nav__link">
+																	<a href="#" class="m-nav__link">
 																		<i class="m-nav__link-icon flaticon-profile-1"></i>
 																		<span class="m-nav__link-title">  
 									<span class="m-nav__link-wrap">      
@@ -382,13 +372,13 @@
 																	</a>
 																</li>
 																<li class="m-nav__item">
-																	<a href="header/profile.html" class="m-nav__link">
+																	<a href="#" class="m-nav__link">
 																		<i class="m-nav__link-icon flaticon-share"></i>
 																		<span class="m-nav__link-text">上传记录</span>
 																	</a>
 																</li>
 																<li class="m-nav__item">
-																	<a href="header/profile.html" class="m-nav__link">
+																	<a href="#" class="m-nav__link">
 																		<i class="m-nav__link-icon flaticon-chat-1"></i>
 																		<span class="m-nav__link-text">消息处理</span>
 																	</a>
@@ -396,13 +386,13 @@
 																<li class="m-nav__separator m-nav__separator--fit">
 																</li>
 																<li class="m-nav__item">
-																	<a href="header/profile.html" class="m-nav__link">
+																	<a href="#" class="m-nav__link">
 																		<i class="m-nav__link-icon flaticon-info"></i>
 																		<span class="m-nav__link-text">问题反馈</span>
 																	</a>
 																</li>
 																<li class="m-nav__item">
-																	<a href="header/profile.html" class="m-nav__link">
+																	<a href="#" class="m-nav__link">
 																		<i class="m-nav__link-icon flaticon-lifebuoy"></i>
 																		<span class="m-nav__link-text">技术支持</span>
 																	</a>
@@ -439,7 +429,7 @@
 						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 							<li class="m-menu__item  m-menu__item--active" aria-haspopup="true">
 								<a href="index.html" class="m-menu__link ">
-									<i class="m-menu__link-icon flaticon-line-graph"></i>
+									<i class="m-menu__link-icon ress ress-home"></i>
 									<span class="m-menu__link-title">
 									<span class="m-menu__link-wrap">
 										<span class="m-menu__link-text">后台首页</span>
@@ -452,7 +442,7 @@
 							</li>
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true">
 								<a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
-									<i class="m-menu__link-icon flaticon-layers"></i>
+									<i class="m-menu__link-icon ress ress-tupian"></i>
 									<span class="m-menu__link-text">图片管理</span>
 									<i class="m-menu__ver-arrow la la-angle-right"></i>
 								</a>
@@ -460,7 +450,7 @@
 									<span class="m-menu__arrow"></span>
 									<ul class="m-menu__subnav">
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="components/base/state.html" class="m-menu__link ">
+											<a href="pic-list.html" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 												<span></span>
 											</i>
@@ -468,7 +458,7 @@
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="components/base/typography.html" class="m-menu__link ">
+											<a href="#" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 												<span></span>
 											</i>
@@ -481,7 +471,7 @@
 							</li>
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true">
 								<a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
-									<i class="m-menu__link-icon flaticon-share"></i>
+									<i class="m-menu__link-icon ress ress-shipin"></i>
 									<span class="m-menu__link-text">视频管理</span>
 									<i class="m-menu__ver-arrow la la-angle-right"></i>
 								</a>
@@ -489,7 +479,7 @@
 									<span class="m-menu__arrow"></span>
 									<ul class="m-menu__subnav">
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="components/icons/flaticon.html" class="m-menu__link ">
+											<a href="video-list.html" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 												<span></span>
 											</i>
@@ -497,7 +487,7 @@
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="components/icons/fontawesome5.html" class="m-menu__link ">
+											<a href="#" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 												<span></span>
 											</i>
@@ -509,15 +499,15 @@
 							</li>
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true">
 								<a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
-									<i class="m-menu__link-icon flaticon-multimedia-1"></i>
+									<i class="m-menu__link-icon ress ress-yinle"></i>
 									<span class="m-menu__link-text">音频管理</span>
 									<i class="m-menu__ver-arrow la la-angle-right"></i>
 								</a>
 								<div class="m-menu__submenu ">
 									<span class="m-menu__arrow"></span>
 									<ul class="m-menu__subnav">
-										<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true">
-											<a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
+										<li class="m-menu__item " aria-haspopup="true">
+											<a href="music-list.html" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 												<span></span>
 											</i>
@@ -526,7 +516,7 @@
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="components/buttons/group.html" class="m-menu__link ">
+											<a href="#" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 												<span></span>
 											</i>
@@ -538,15 +528,15 @@
 							</li>
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true">
 								<a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
-									<i class="m-menu__link-icon flaticon-piggy-bank"></i>
+									<i class="m-menu__link-icon ress ress-wenjianjia1"></i>
 									<span class="m-menu__link-text">文档管理</span>
 									<i class="m-menu__ver-arrow la la-angle-right"></i>
 								</a>
 								<div class="m-menu__submenu ">
 									<span class="m-menu__arrow"></span>
 									<ul class="m-menu__subnav">
-										<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true">
-											<a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
+										<li class="m-menu__item" aria-haspopup="true">
+											<a href="file-list.html" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 												<span></span>
 											</i>
@@ -555,7 +545,7 @@
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="components/buttons/group.html" class="m-menu__link ">
+											<a href="#" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 												<span></span>
 											</i>
@@ -571,20 +561,24 @@
 							</li>
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true">
 								<a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
-									<i class="m-menu__link-icon flaticon-interface-9"></i>
+									<i class="m-menu__link-icon ress ress-shangchuan"></i>
 									<span class="m-menu__link-text">上传设置</span>
 									<i class="m-menu__ver-arrow la la-angle-right"></i>
 								</a>
 								<div class="m-menu__submenu ">
 									<span class="m-menu__arrow"></span>
 									<ul class="m-menu__subnav">
-										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
-											<span class="m-menu__link">
-											<span class="m-menu__link-text">图片上传设置</span>
-											</span>
-										</li>
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="snippets/general/pricing-tables/pricing-table-1.html" class="m-menu__link ">
+											<a href="set.html" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+												<span></span>
+											</i>
+												<span class="m-menu__link-text">图片上传设置</span>
+											</a>
+										</li>
+										
+										<li class="m-menu__item " aria-haspopup="true">
+											<a href="set.html" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 												<span></span>
 											</i>
@@ -592,7 +586,7 @@
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="snippets/general/pricing-tables/pricing-table-2.html" class="m-menu__link ">
+											<a href="set.html" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 												<span></span>
 											</i>
@@ -600,7 +594,7 @@
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="snippets/general/pricing-tables/pricing-table-3.html" class="m-menu__link ">
+											<a href="set.html" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 												<span></span>
 											</i>
@@ -613,20 +607,23 @@
 							</li>
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true">
 								<a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
-									<i class="m-menu__link-icon flaticon-piggy-bank"></i>
+									<i class="m-menu__link-icon ress ress-yonghu1"></i>
 									<span class="m-menu__link-text">用户设置</span>
 									<i class="m-menu__ver-arrow la la-angle-right"></i>
 								</a>
 								<div class="m-menu__submenu ">
 									<span class="m-menu__arrow"></span>
 									<ul class="m-menu__subnav">
-										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
-											<span class="m-menu__link">
-											<span class="m-menu__link-text">用户信息修改</span>
-											</span>
+										<li class="m-menu__item " aria-haspopup="true">
+											<a href="user.html" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+												<span></span>
+											</i>
+												<span class="m-menu__link-text">用户信息修改</span>
+											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="snippets/invoices/invoice-1.html" class="m-menu__link ">
+											<a href="set.html" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 												<span></span>
 											</i>
@@ -634,7 +631,7 @@
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="snippets/invoices/invoice-2.html" class="m-menu__link ">
+											<a href="set.html" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 												<span></span>
 											</i>
@@ -646,13 +643,13 @@
 							</li>
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true">
 								<a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
-									<i class="m-menu__link-icon flaticon-exclamation"></i>
+									<i class="m-menu__link-icon ress ress-jiandingzhengshu"></i>
 									<span class="m-menu__link-text">鉴黄设置</span>
 								</a>
 							</li>
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true">
 								<a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
-									<i class="m-menu__link-icon flaticon-suitcase"></i>
+									<i class="m-menu__link-icon ress ress-kefuzhichi"></i>
 									<span class="m-menu__link-text">技术支持</span>
 								</a>
 							</li>
@@ -666,18 +663,15 @@
 					<!-- BEGIN: Subheader -->
 					<div class="m-subheader ">
 						<div class="d-flex align-items-center">
-							<div class="mr-auto">
-								<h3 class="m-subheader__title ">REMS资源管理系统</h3>
+							<div class="m--margin-right-auto">
+								<h3 class="m-subheader__title ">REMS管理系统</h3>
 							</div>
 							<div>
-								<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
+								<span class="m-subheader__daterange">
 					<span class="m-subheader__daterange-label" style="padding-right: 1.5rem;">
-						<span class="m-subheader__daterange-title"></span>
-								<span class="m-subheader__daterange-date m--font-brand"></span>
-								</span>
-								<!--a href="#" class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
-									<i class="la la-angle-down"></i>
-								</a-->
+						<span class="m-subheader__daterange-title">今天是:</span>
+								<span class="m-subheader__daterange-date m--font-brand"> 2018年9月17日</span>
+							</span>
 								</span>
 							</div>
 						</div>
@@ -711,18 +705,19 @@
 												<div class="m-widget17__items m-widget17__items-col1">
 													<div class="m-widget17__item">
 														<span class="m-widget17__icon">
-							<i class="flaticon-truck m--font-brand"></i>             
+							<i class="ress ress-tupian m--font-brand"></i>             
 						</span>
 														<span class="m-widget17__subtitle">
 							图片上传
 						</span>
 														<span class="m-widget17__desc">
-							12542张图片
+							<span>12452</span>张图片
 						</span>
+						
 													</div>
 													<div class="m-widget17__item">
 														<span class="m-widget17__icon">
-							<i class="flaticon-paper-plane m--font-info"></i>             
+							<i class="ress ress-yinle m--font-info"></i>             
 						</span>
 														<span class="m-widget17__subtitle">
 							音频上传
@@ -735,7 +730,7 @@
 												<div class="m-widget17__items m-widget17__items-col2">
 													<div class="m-widget17__item">
 														<span class="m-widget17__icon">
-							<i class="flaticon-pie-chart m--font-success"></i>
+							<i class="ress ress-shipin m--font-success"></i>
 						</span>
 														<span class="m-widget17__subtitle">
 							视频上传
@@ -746,7 +741,7 @@
 													</div>
 													<div class="m-widget17__item">
 														<span class="m-widget17__icon">
-							<i class="flaticon-time m--font-danger"></i>
+							<i class="ress ress-wenjianjia1 m--font-danger"></i>
 						</span>
 														<span class="m-widget17__subtitle">
 							文档上传
@@ -779,7 +774,9 @@
 										<!--begin::Widget 29-->
 										<div class="m-widget29">
 											<div class="m-widget_content">
-												<h3 class="m-widget_content-title"><i class="flaticon-time m--font-danger"></i> 图片上传情况</h3>
+												<h3 class="m-widget_content-title"><span class="btn btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
+								<i class="ress ress-tupian m--font-light m--font-light"></i>
+							</span> 图片上传情况</h3>
 												<div class="m-widget_content-items">
 													<div class="m-widget_content-item">
 														<span>图片数量</span>
@@ -794,9 +791,14 @@
 														<span>30</span>
 													</div>
 												</div>
+												<div class="progress m-progress--sm">
+							<div class="progress-bar m--bg-brand" role="progressbar" style="width: 78%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
 											</div>
 											<div class="m-widget_content">
-												<h3 class="m-widget_content-title"><i class="flaticon-time m--font-danger"></i> 视频上传情况</h3>
+												<h3 class="m-widget_content-title"><span class="btn btn-success m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
+								<i class="ress ress-shipin m--font-light m--font-light"></i>
+							</span> 视频上传情况</h3>
 												<div class="m-widget_content-items">
 													<div class="m-widget_content-item">
 														<span>视频数量</span>
@@ -811,9 +813,14 @@
 														<span>30</span>
 													</div>
 												</div>
+												<div class="progress m-progress--sm">
+							<div class="progress-bar m--bg-success" role="progressbar" style="width: 84%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
 											</div>
 											<div class="m-widget_content">
-												<h3 class="m-widget_content-title"><i class="flaticon-time m--font-danger"></i> 音频上传情况</h3>
+												<h3 class="m-widget_content-title"><span class="btn btn-info m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
+								<i class="ress ress-yinle  m--font-light m--font-light"></i>
+							</span> 音频上传情况</h3>
 												<div class="m-widget_content-items">
 													<div class="m-widget_content-item">
 														<span>音频数量</span>
@@ -828,6 +835,9 @@
 														<span>30</span>
 													</div>
 												</div>
+												<div class="progress m-progress--sm">
+							<div class="progress-bar m--bg-info" role="progressbar" style="width: 69%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
 											</div>
 										</div>
 										<!--end::Widget 29-->
@@ -852,7 +862,7 @@
 									<div class="m-portlet__body">
 										<div class="m-widget27 m-portlet-fit--sides">
 											<div class="m-widget27__pic">
-												<img src="assets/app/media/img//bg/bg-4.jpg" alt="">
+												<img src="assets/img//bg/bg-4.jpg" alt="">
 												<h3 class="m-widget27__title m--font-light">					 
 					<span>256100<span>份</span></span>				
 				</h3>
@@ -884,7 +894,9 @@
 														<div class="row  align-items-center">
 															<div class="col">
 																<div id="m_chart_personal_income_quater_1" class="m-widget27__chart" style="height: 160px">
-																	<div class="m-widget27__stat"><i class="flaticon-time m--font-danger"></i></div>
+																	<div class="m-widget27__stat"><svg class="r-icon" aria-hidden="true">
+    <use xlink:href="#ress-WORD"></use>
+</svg></div>
 																</div>
 															</div>
 															<div class="col">
@@ -909,7 +921,9 @@
 														<div class="row  align-items-center">
 															<div class="col">
 																<div id="m_chart_personal_income_quater_2" class="m-widget27__chart" style="height: 160px">
-																	<div class="m-widget27__stat"><i class="flaticon-time m--font-danger"></i></div>
+																	<div class="m-widget27__stat"><svg class="r-icon " aria-hidden="true">
+    <use xlink:href="#ress-Excel"></use>
+</svg></div>
 																</div>
 															</div>
 															<div class="col">
@@ -934,7 +948,9 @@
 														<div class="row  align-items-center">
 															<div class="col">
 																<div id="m_chart_personal_income_quater_3" class="m-widget27__chart" style="height: 160px">
-																	<div class="m-widget27__stat"><i class="flaticon-time m--font-danger"></i></div>
+																	<div class="m-widget27__stat"><svg class="r-icon " aria-hidden="true">
+    <use xlink:href="#ress-PPT"></use>
+</svg></div>
 																</div>
 															</div>
 															<div class="col">
@@ -959,7 +975,9 @@
 														<div class="row  align-items-center">
 															<div class="col">
 																<div id="m_chart_personal_income_quater_4" class="m-widget27__chart" style="height: 160px">
-																	<div class="m-widget27__stat"><i class="flaticon-time m--font-danger"></i></div>
+																	<div class="m-widget27__stat"><svg class="r-icon " aria-hidden="true">
+    <use xlink:href="#ress-PDF"></use>
+</svg></div>
 																</div>
 															</div>
 															<div class="col">
@@ -1692,476 +1710,19 @@
 		</div>
 		<!-- end:: Page -->
 
-		<!-- begin::Quick Sidebar -->
-		<div id="m_quick_sidebar" class="m-quick-sidebar m-quick-sidebar--tabbed m-quick-sidebar--skin-light">
-			<div class="m-quick-sidebar__content m--hide">
-				<span id="m_quick_sidebar_close" class="m-quick-sidebar__close"><i class="la la-close"></i></span>
-				<ul id="m_quick_sidebar_tabs" class="nav nav-tabs m-tabs m-tabs-line m-tabs-line--brand" role="tablist">
-					<li class="nav-item m-tabs__item">
-						<a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_quick_sidebar_tabs_messenger" role="tab">Messages</a>
-					</li>
-					<li class="nav-item m-tabs__item">
-						<a class="nav-link m-tabs__link" data-toggle="tab" href="#m_quick_sidebar_tabs_settings" role="tab">Settings</a>
-					</li>
-					<li class="nav-item m-tabs__item">
-						<a class="nav-link m-tabs__link" data-toggle="tab" href="#m_quick_sidebar_tabs_logs" role="tab">Logs</a>
-					</li>
-				</ul>
-				<div class="tab-content">
-					<div class="tab-pane active" id="m_quick_sidebar_tabs_messenger" role="tabpanel">
-						<div class="m-messenger m-messenger--message-arrow m-messenger--skin-light">
-							<div class="m-messenger__messages m-scrollable">
-								<div class="m-messenger__wrapper">
-									<div class="m-messenger__message m-messenger__message--in">
-										<div class="m-messenger__message-pic">
-											<img src="assets/app/media/img//users/user3.jpg" alt="" />
-										</div>
-										<div class="m-messenger__message-body">
-											<div class="m-messenger__message-arrow"></div>
-											<div class="m-messenger__message-content">
-												<div class="m-messenger__message-username">
-													Megan wrote
-												</div>
-												<div class="m-messenger__message-text">
-													Hi Bob. What time will be the meeting ?
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="m-messenger__wrapper">
-									<div class="m-messenger__message m-messenger__message--out">
-										<div class="m-messenger__message-body">
-											<div class="m-messenger__message-arrow"></div>
-											<div class="m-messenger__message-content">
-												<div class="m-messenger__message-text">
-													Hi Megan. It's at 2.30PM
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="m-messenger__wrapper">
-									<div class="m-messenger__message m-messenger__message--in">
-										<div class="m-messenger__message-pic">
-											<img src="assets/app/media/img//users/user3.jpg" alt="" />
-										</div>
-										<div class="m-messenger__message-body">
-											<div class="m-messenger__message-arrow"></div>
-											<div class="m-messenger__message-content">
-												<div class="m-messenger__message-username">
-													Megan wrote
-												</div>
-												<div class="m-messenger__message-text">
-													Will the development team be joining ?
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="m-messenger__wrapper">
-									<div class="m-messenger__message m-messenger__message--out">
-										<div class="m-messenger__message-body">
-											<div class="m-messenger__message-arrow"></div>
-											<div class="m-messenger__message-content">
-												<div class="m-messenger__message-text">
-													Yes sure. I invited them as well
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="m-messenger__datetime">2:30PM</div>
-								<div class="m-messenger__wrapper">
-									<div class="m-messenger__message m-messenger__message--in">
-										<div class="m-messenger__message-pic">
-											<img src="assets/app/media/img//users/user3.jpg" alt="" />
-										</div>
-										<div class="m-messenger__message-body">
-											<div class="m-messenger__message-arrow"></div>
-											<div class="m-messenger__message-content">
-												<div class="m-messenger__message-username">
-													Megan wrote
-												</div>
-												<div class="m-messenger__message-text">
-													Noted. For the Coca-Cola Mobile App project as well ?
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="m-messenger__wrapper">
-									<div class="m-messenger__message m-messenger__message--out">
-										<div class="m-messenger__message-body">
-											<div class="m-messenger__message-arrow"></div>
-											<div class="m-messenger__message-content">
-												<div class="m-messenger__message-text">
-													Yes, sure.
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="m-messenger__wrapper">
-									<div class="m-messenger__message m-messenger__message--out">
-										<div class="m-messenger__message-body">
-											<div class="m-messenger__message-arrow"></div>
-											<div class="m-messenger__message-content">
-												<div class="m-messenger__message-text">
-													Please also prepare the quotation for the Loop CRM project as well.
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="m-messenger__datetime">3:15PM</div>
-								<div class="m-messenger__wrapper">
-									<div class="m-messenger__message m-messenger__message--in">
-										<div class="m-messenger__message-no-pic m--bg-fill-danger">
-											<span>M</span>
-										</div>
-										<div class="m-messenger__message-body">
-											<div class="m-messenger__message-arrow"></div>
-											<div class="m-messenger__message-content">
-												<div class="m-messenger__message-username">
-													Megan wrote
-												</div>
-												<div class="m-messenger__message-text">
-													Noted. I will prepare it.
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="m-messenger__wrapper">
-									<div class="m-messenger__message m-messenger__message--out">
-										<div class="m-messenger__message-body">
-											<div class="m-messenger__message-arrow"></div>
-											<div class="m-messenger__message-content">
-												<div class="m-messenger__message-text">
-													Thanks Megan. I will see you later.
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="m-messenger__wrapper">
-									<div class="m-messenger__message m-messenger__message--in">
-										<div class="m-messenger__message-pic">
-											<img src="assets/app/media/img//users/user3.jpg" alt="" />
-										</div>
-										<div class="m-messenger__message-body">
-											<div class="m-messenger__message-arrow"></div>
-											<div class="m-messenger__message-content">
-												<div class="m-messenger__message-username">
-													Megan wrote
-												</div>
-												<div class="m-messenger__message-text">
-													Sure. See you in the meeting soon.
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="m-messenger__seperator"></div>
-
-							<div class="m-messenger__form">
-								<div class="m-messenger__form-controls">
-									<input type="text" name="" placeholder="Type here..." class="m-messenger__form-input">
-								</div>
-								<div class="m-messenger__form-tools">
-									<a href="" class="m-messenger__form-attachment">
-										<i class="la la-paperclip"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="tab-pane" id="m_quick_sidebar_tabs_settings" role="tabpanel">
-						<div class="m-list-settings m-scrollable">
-							<div class="m-list-settings__group">
-								<div class="m-list-settings__heading">General Settings</div>
-								<div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">Email Notifications</span>
-									<span class="m-list-settings__item-control">
-							<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-							<label>
-							<input type="checkbox" checked="checked" name="">
-							<span></span>
-									</label>
-									</span>
-									</span>
-								</div>
-								<div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">Site Tracking</span>
-									<span class="m-list-settings__item-control">
-							<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-							<label>
-							<input type="checkbox" name="">
-							<span></span>
-									</label>
-									</span>
-									</span>
-								</div>
-								<div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">SMS Alerts</span>
-									<span class="m-list-settings__item-control">
-							<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-							<label>
-							<input type="checkbox" name="">
-							<span></span>
-									</label>
-									</span>
-									</span>
-								</div>
-								<div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">Backup Storage</span>
-									<span class="m-list-settings__item-control">
-							<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-							<label>
-							<input type="checkbox" name="">
-							<span></span>
-									</label>
-									</span>
-									</span>
-								</div>
-								<div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">Audit Logs</span>
-									<span class="m-list-settings__item-control">
-							<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-							<label>
-							<input type="checkbox" checked="checked" name="">
-							<span></span>
-									</label>
-									</span>
-									</span>
-								</div>
-							</div>
-							<div class="m-list-settings__group">
-								<div class="m-list-settings__heading">System Settings</div>
-								<div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">System Logs</span>
-									<span class="m-list-settings__item-control">
-							<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-							<label>
-							<input type="checkbox" name="">
-							<span></span>
-									</label>
-									</span>
-									</span>
-								</div>
-								<div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">Error Reporting</span>
-									<span class="m-list-settings__item-control">
-							<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-							<label>
-							<input type="checkbox" name="">
-							<span></span>
-									</label>
-									</span>
-									</span>
-								</div>
-								<div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">Applications Logs</span>
-									<span class="m-list-settings__item-control">
-							<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-							<label>
-							<input type="checkbox" name="">
-							<span></span>
-									</label>
-									</span>
-									</span>
-								</div>
-								<div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">Backup Servers</span>
-									<span class="m-list-settings__item-control">
-							<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-							<label>
-							<input type="checkbox" checked="checked" name="">
-							<span></span>
-									</label>
-									</span>
-									</span>
-								</div>
-								<div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">Audit Logs</span>
-									<span class="m-list-settings__item-control">
-							<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-							<label>
-							<input type="checkbox" name="">
-							<span></span>
-									</label>
-									</span>
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="tab-pane" id="m_quick_sidebar_tabs_logs" role="tabpanel">
-						<div class="m-list-timeline m-scrollable">
-							<div class="m-list-timeline__group">
-								<div class="m-list-timeline__heading">
-									System Logs
-								</div>
-								<div class="m-list-timeline__items">
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">12 new users registered <span class="m-badge m-badge--warning m-badge--wide">important</span></a>
-										<span class="m-list-timeline__time">Just now</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">System shutdown</a>
-										<span class="m-list-timeline__time">11 mins</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-danger"></span>
-										<a href="" class="m-list-timeline__text">New invoice received</a>
-										<span class="m-list-timeline__time">20 mins</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-warning"></span>
-										<a href="" class="m-list-timeline__text">Database overloaded 89% <span class="m-badge m-badge--success m-badge--wide">resolved</span></a>
-										<span class="m-list-timeline__time">1 hr</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">System error</a>
-										<span class="m-list-timeline__time">2 hrs</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">Production server down <span class="m-badge m-badge--danger m-badge--wide">pending</span></a>
-										<span class="m-list-timeline__time">3 hrs</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">Production server up</a>
-										<span class="m-list-timeline__time">5 hrs</span>
-									</div>
-								</div>
-							</div>
-							<div class="m-list-timeline__group">
-								<div class="m-list-timeline__heading">
-									Applications Logs
-								</div>
-								<div class="m-list-timeline__items">
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">New order received <span class="m-badge m-badge--info m-badge--wide">urgent</span></a>
-										<span class="m-list-timeline__time">7 hrs</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">12 new users registered</a>
-										<span class="m-list-timeline__time">Just now</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">System shutdown</a>
-										<span class="m-list-timeline__time">11 mins</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-danger"></span>
-										<a href="" class="m-list-timeline__text">New invoices received</a>
-										<span class="m-list-timeline__time">20 mins</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-warning"></span>
-										<a href="" class="m-list-timeline__text">Database overloaded 89%</a>
-										<span class="m-list-timeline__time">1 hr</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">System error <span class="m-badge m-badge--info m-badge--wide">pending</span></a>
-										<span class="m-list-timeline__time">2 hrs</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">Production server down</a>
-										<span class="m-list-timeline__time">3 hrs</span>
-									</div>
-								</div>
-							</div>
-							<div class="m-list-timeline__group">
-								<div class="m-list-timeline__heading">
-									Server Logs
-								</div>
-								<div class="m-list-timeline__items">
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">Production server up</a>
-										<span class="m-list-timeline__time">5 hrs</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">New order received</a>
-										<span class="m-list-timeline__time">7 hrs</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">12 new users registered</a>
-										<span class="m-list-timeline__time">Just now</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">System shutdown</a>
-										<span class="m-list-timeline__time">11 mins</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-danger"></span>
-										<a href="" class="m-list-timeline__text">New invoice received</a>
-										<span class="m-list-timeline__time">20 mins</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-warning"></span>
-										<a href="" class="m-list-timeline__text">Database overloaded 89%</a>
-										<span class="m-list-timeline__time">1 hr</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">System error</a>
-										<span class="m-list-timeline__time">2 hrs</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">Production server down</a>
-										<span class="m-list-timeline__time">3 hrs</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">Production server up</a>
-										<span class="m-list-timeline__time">5 hrs</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">New order received</a>
-										<span class="m-list-timeline__time">1117 hrs</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end::Quick Sidebar -->
+		
 		<!-- begin::Scroll Top -->
 		<div id="m_scroll_top" class="m-scroll-top">
-			<i class="la la-arrow-up"></i>
+			<i class="ress ress-shangla"></i>
 		</div>
 		<!-- end::Scroll Top -->
 		<!--begin::Base Scripts -->
-		<script src="js/vendors.bundle.js" type="text/javascript"></script>
-		<script src="js/scripts.bundle.js" type="text/javascript"></script>
+		<script src="assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+		<script src="assets/vendors/base/scripts.bundle.js" type="text/javascript"></script>
 		<!--end::Base Scripts -->
 
 		<!--begin::Page Snippets -->
-		<script src="js/dashboard.js" type="text/javascript"></script>
+		<script src="assets/vendors/base/dashboard.js" type="text/javascript"></script>
 		<!--end::Page Snippets -->
 
 	</body>
