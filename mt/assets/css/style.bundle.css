@@ -4120,6 +4120,15 @@ body.m-portlet--fullscreen.m-aside-left--fixed .m-aside-left {
 	margin: 0 auto
 }
 
+.m-login.m-login--2 .m-login__wrapper .m-login__container .m-login-rcode {
+	text-align: center;
+}
+.m-login.m-login--2 .m-login__wrapper .m-login__container .m-login-rcode img {
+	width: 100%;
+	max-width: 290px;
+	margin: 20px 0;
+}
+
 .m-login.m-login--2 .m-login__wrapper .m-login__container .m-login__logo {
 	text-align: center;
 	margin: 0 auto 4rem auto
@@ -4247,6 +4256,7 @@ body.m-portlet--fullscreen.m-aside-left--fixed .m-aside-left {
 .m-login.m-login--2.m-login--forget-password .m-login__forget-password {
 	display: block
 }
+
 
 @media (max-width: 1024px) {
 	.m-login.m-login--2 .m-login__wrapper {
