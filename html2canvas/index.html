@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>艺博新十年，崇尚「实」文化！</title>
+    <meta name="apple-mobile-web-app-title" content="艺博新十年，崇尚「实」文化！">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="viewport" content="width=640,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/touch.min.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <script type="text/javascript">
+        var docEl = document.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                docEl.style.fontSize = 10 * (docEl.clientWidth / 320) + 'px';
+            };
+        window.addEventListener(resizeEvt, recalc, false);
+        document.addEventListener('DOMContentLoaded', recalc, false);
+    </script>
+
+
+</head>
+
+<body>
+    <div class="first">
+
+        <div class="edit27 edit_common" id="edit_common">
+            <div class="edit27_con">
+                <div class="edit27_conbg1" id="editmove">
+                    <img class="picbg" src="images/111111.jpg">
+                </div>
+                <div class="edit27_conbg2">
+                    <img src="images/bg_01.png" />
+                    <img src="images/bg_02.png" />
+                    <img src="images/bg_03.png" />
+                    <img src="images/bg_04.jpg" />
+                    <img src="images/bg_05.jpg" />
+                </div>
+                <div class="edit27_con1">
+                    <div class="edit27_con1txt">
+                        <div class="xingming">
+                            <p class="textbox"><span>感谢亲爱的</span><input type="text" class="txt_online" size="3"><span>老师，给我人生的第一课！</span></p>
+                            <p class="textbox">别人都说老师<input type="text" class="txt_online t1" size="15"></p>
+                            <p class="textbox">却不知道您<input type="text" class="txt_online t2" size="16"></p>
+                            <p class="textbox"><input type="text" class="txt_online t3" size="16"></p>
+                            <div class="t-line">
+                                <i class="t1-line"></i>
+                                <i class="t2-line"></i>
+                                <i class="t3-line"></i>
+                                <i class="t4-line"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="edit27_con2">
+                    <div class="user_t">
+
+                        <p><span>身</span><span>/</span><span>修</span><span>/</span><span>家</span><span>/</span><span>和</span><span>/</span><span>美</span><span>/</span><span>丽</span><span>/</span><span>中</span><span>/</span><span>国</span></p>
+                    </div>
+                </div>
+                <div class="edit27_con3">
+                    <div class="logo_t">
+                        <img src="images/logo_t_m.png" />
+                    </div>
+                </div>
+                <div class="edit27_con4">
+                    <img src="images/code.png" />
+                    <div class="geyan">
+                        <p>识别二维码写下你眼中的老师</p>
+                    </div>
+                </div>
+                <div class="edit27_con5">
+                    <p>我是</p>
+                    <img src="images/qrcode-2ac5e.png" />
+                    <p><input class="txt_online" type="text" value="某某某" size="6"></p>
+                </div>
+
+                <div class="edit27_up2">
+                    <div class="edit27_up22">
+                        <div class="edit27_fileInput2 left">
+                            <input runat="server" type="file" accept="image/*" name="edit27_upfile2" id="edit27_upfile2"
+                                style="display:none" class="edit27_upfile2" onchange="document.getElementById('edit27_upfileResult2').innerHTML=this.value;" />
+                            <input class="edit27_upFileBtn2" id="edit27_upfileResult2" type="image" src="images/upload.png"
+                                style="width:2rem;height:2rem" value="上传图片" onclick="document.getElementById('edit27_upfile2').click();" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="shengcheng27 shengcheng_common" id="shengcheng_common">
+                <p id="desnote" style="text-align:center;">注意：点击“魏明雪”更改为您的名字！</p>
+                <div class="edit_create">
+                    <h3>完成编辑</h3>
+                </div>
+                <div class="spacebtn"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 第二十七个页面结束 -->
+
+    <script type="text/javascript">
+        $("#edit27_upfile2").change(function () {
+            var objUrl = getObjectURL(this.files[0]);
+            if (objUrl) {
+                $(".edit27_conbg1 img").attr("src", objUrl);
+            }
+        });
+        //建立一个可存取到该file的url
+        function getObjectURL(file) {
+            var url = null;
+
+            if (window.createObjectURL != undefined) { // basic
+                url = window.createObjectURL(file);
+            } else if (window.URL != undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file);
+            } else if (window.webkitURL != undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file);
+            }
+            return url;
+        }
+        $(".shengcheng27").click(function () {
+
+            //$(".shengcheng27").hide();
+            $(".edit27_up1").hide();
+            $(".edit27_up2").hide();
+            $(".header").hide();
+            //$(".edit27_conbg2 img").hide();
+            $("body").css("background", "none");
+
+            var width = $(".edit27_con").width();
+            var height = $(".edit27_con").height();
+            var type = "jpg";
+            var scaleBy = 2; //缩放比例1.46484375
+            var canvas = document.createElement('canvas');
+            canvas.width = width * scaleBy;
+            canvas.height = height * scaleBy - 1; //35是我处理完后发现短了一点，具体为什么不清楚,如果你也少的话，根据自己的项目调吧
+            canvas.style.width = width * scaleBy + 'px';
+            canvas.style.height = height * scaleBy + 'px';
+            //canvas.width = 750;
+            //canvas.height = 1334;  
+            //canvas.style.width = 750+ 'px';
+            //canvas.style.height = 1334 + 'px';
+            var context = canvas.getContext('2d');
+            context.scale(scaleBy, scaleBy);
+            context.strokeStyle = "#ffffff";
+            context.stroke();
+            context.fillStyle = "#ffffff";
+            context.fill();
+            context.translate(-67, -20); //这里设置画布偏移量距离左边和上边的值
+
+            html2canvas($(".edit27_con"), {
+                allowTaint: true,
+                taintTest: false,
+                canvas: canvas,
+                onrendered: function (canvas) {
+                    canvas.id = "mycanvas";
+                    //生成base64图片数据
+                    $(".header").show();
+                    $("#weixin-tip").show();
+                    //$(".baocun").show();
+                    //$(".tool").show();
+
+                    var dataUrl = canvas.toDataURL("image/jpg");
+                    $(".baocunimg img").attr("src", dataUrl);
+                    //$(".pic-download-use").attr("src",dataUrl);
+                    //$(".edit27").hide();
+                    console.log("已生成");
+                }
+            });
+        });
+
+        //第二十七个页面结束
+    </script>
+    <!-- 第一个页面结束 -->
+    <div id="weixin-tip">
+
+        <div class="top-share"><img class="icon" src="images/top_share.png"></div>
+        <div class="baocun">
+            <span class="close">×</span>
+            <div class="baocunimg">
+                <img src="" />
+            </div>
+        </div>
+        <div class="bottom-share"><img class="icon" src="images/bottom_share.png"></div>
+    </div>
+    <!-- 生成后显示页面结束 -->
+    <!-- 改变生成图片后背景 -->
+    <script type="text/javascript">
+        $(".close").click(function () {
+
+            $(".shengcheng27").show();
+            $(".edit27_up1").show();
+            $(".edit27_up2").show();
+            $(".header").show();
+            $("#weixin-tip").hide();
+            //$("body").css("background","none");
+
+
+        });
+        $(function () {
+            $('html').css('background-color', '#e2e2e2');
+        })
+    </script>
+    <!-- 改变生成图片后背景 -->
+    <!-- 添加touch事件 -->
+    <script type="text/javascript">
+        // 获取节点
+        var block = document.getElementById("editmove");
+        var oW, oH;
+        // 绑定touchstart事件
+        block.addEventListener("touchstart", function (e) {
+            console.log(e);
+            var touches = e.touches[0];
+            oW = touches.clientX - block.offsetLeft;
+            oH = touches.clientY - block.offsetTop;
+            //阻止页面的滑动默认事件
+            document.addEventListener("touchmove", defaultEvent, false);
+        }, false)
+
+        block.addEventListener("touchmove", function (e) {
+            var touches = e.touches[0];
+            var oLeft = touches.clientX - oW;
+            var oTop = touches.clientY - oH;
+            // if(oLeft < 0) else if(oLeft > document.documentElement.clientWidth - block.offsetWidth) {
+            //  oLeft = (document.documentElement.clientWidth - block.offsetWidth);
+            // }
+            block.style.left = oLeft + "px";
+            block.style.top = oTop + "px";
+        }, false);
+
+        block.addEventListener("touchend", function () {
+            document.removeEventListener("touchmove", defaultEvent, false);
+        }, false);
+
+        function defaultEvent(e) {
+            e.preventDefault();
+        }
+    </script>
+    <!-- 拖动-->
+    <!-- 监听手势 缩放-->
+    <script type="text/javascript">
+        var target1 = document.getElementById("editmove");
+        // target1.style.webkitTransition = 'all ease 0.05s';
+
+        touch.on('#editmove', 'touchstart', function (ev) {
+            ev.preventDefault();
+        });
+
+        var initialScale = 1;
+        var currentScale;
+
+        touch.on('#editmove', 'pinchend', function (ev) {
+            currentScale = ev.scale - 1;
+            console.log(currentScale);
+            currentScale = initialScale + currentScale;
+            // currentScale = currentScale > 2 ? 2 : currentScale;//去掉这部分可以让自由缩放没有最大最小限制
+            // currentScale = currentScale < 1 ? 0.5 : currentScale;
+            this.style.webkitTransform = 'scale(' + currentScale + ')';
+            console.log("当前缩放比例为:" + currentScale + ".");
+        });
+
+        touch.on('#editmove', 'pinchend', function (ev) {
+            initialScale = currentScale;
+        });
+    </script>
+
+</body>
+
+</html>
