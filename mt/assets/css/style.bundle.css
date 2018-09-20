@@ -4638,7 +4638,8 @@ body.m-content--skin-light2 {
 }
 
 .m-brand .m-brand__tools .m-brand__icon>i {
-	font-size: 1.4rem
+	font-size: 2rem;
+	line-height: 2rem;
 }
 
 .m-brand .m-brand__tools .m-brand__icon:hover {
