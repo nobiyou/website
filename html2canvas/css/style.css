@@ -43,14 +43,17 @@ ul {
     font-style: normal;
 
 }
+.first {
+	padding-top: 1rem;
+	height: calc(100% - 1rem);
+}
 .edit27 {
-	width: 24rem;
-	height: 42.7rem;
+	width: 25.3rem;
+	height: 45rem;
 	margin: 0px auto;
 	background-color: #eff1e3;
 	position: relative;
 	margin: 0 auto;
-	margin-top: 1em;
 }
 
 .edit27_con {
@@ -62,22 +65,20 @@ ul {
 }
 
 .edit27_conbg1 {
-	width: 10rem;
-	height: 10rem;
+	width: 100%;
+	height: 100%;
 	position: absolute;
-	right: 1.4rem;
-	top: 13rem;
+	top: 0;
 	/* overflow: hidden; */
 }
 
 .edit27_conbg1 .picbg {
-	width: 100%;
 	position: absolute;
 }
 
 .edit27_conbg2 {
-	width: 24rem;
-	height: 42.7rem;
+	width: 25.3rem;
+	height: 45rem;
 	overflow: hidden;
 	/*background: url(../images/bg.png) no-repeat;*/
 	background-size: 100% 100%;
@@ -92,7 +93,7 @@ ul {
 	text-align: left;
 	position: absolute;
 	left: 1.5rem;
-	top: 18rem;
+	top: 22rem;
 	width: calc(100% - 3rem);
 	font-size: 1rem;
 }
@@ -139,28 +140,28 @@ ul {
 .edit27_con1 .t2-line {
 	position: absolute;
 	content: ""; 
-	width: 15rem;
+	width: 16rem;
 	height: 1px;
 	background: #333;
-	top: 6.8rem;
+	top: 4.3rem;
 	left: 6rem;
 }
 .edit27_con1 .t3-line {
 	position: absolute;
 	content: ""; 
-	width: 16rem;
+	width: 17rem;
 	height: 1px;
 	background: #333;
-	top: 9.3rem;
+	top: 6.8rem;
 	left: 5rem;
 }
 .edit27_con1 .t4-line {
 	position: absolute;
 	content: ""; 
-	width: 21rem;
+	width: 22rem;
 	height: 1px;
 	background: #333;
-	top: 11.8rem;
+	top: 9.3rem;
 	left: 0;
 }
 
@@ -186,22 +187,22 @@ ul {
 
 .edit27_con3 {
 	height: 4.5rem;
-	text-align: center;
 	position: absolute;
 	top: .5rem;
+	left: 1rem;
 	width: 100%;
 }
 
 .edit27_con3 .logo_t img {
 	width: 8rem;
-	padding-top: .6rem;
-	margin: 0 auto;
+	padding-top: .8rem;
+	margin: 0 auto; 
 }
 
 .edit27_up2 {
 	position: absolute;
-	top: 16rem;
-	right: 5.5rem;
+	top: 5rem;
+	left: calc(50% - 2rem);
 	margin: 0 auto;
 }
 
@@ -256,7 +257,7 @@ ul {
 #shengcheng_common {
 	position: fixed;
 	width: 100%;
-	height: 6.02rem;
+	height: 3.5rem;
 	bottom: 0rem;
 	left: 0;
 }
@@ -350,5 +351,5 @@ ul {
 .bottom-share img {
 	position: fixed;
 	width: 100%;
-	bottom: 10rem;
+	bottom: 1rem;
 }
