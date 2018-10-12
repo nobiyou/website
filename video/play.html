@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<link type="text/css" rel="stylesheet" href="css/playmovie.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+</head>
+
+<body oncontextmenu = "return false">
+	<header class="qy-header qy-header-nonIndex" id="block-A">
+		<div class="header-wrap">
+			<div class="header-inner">
+				<div id="nav_logo" class="qy-logo" style="display: block;">
+					<a href="https://www.iqiyi.com" title="爱奇艺视频" class="logo-sprite logo-link-nonIndex"><img height="100%" src="img/sprite-headLogo-gold.png"
+						 alt="爱奇艺视频"></a> <i class="logo-dot"></i>
+					<a title="电影" href="https://www.iqiyi.com/dianying/" class="logo-channel">
+						<h2>电影</h2>
+					</a>
+				</div>
+				<div class="qy-nav" style="display: block;">
+					<span class="nav-home"><a target="_blank" href="https://www.iqiyi.com/" class="nav-link">首页</a> <i class="home-line"></i></span>
+					<div class="nav-guide nav-link" id="dhBtn">
+						<div><span>导航</span></div>
+					</div>
+				</div>
+
+				<div class="qy-header-side">
+					<div class="header-sideItem header-user">
+						<div>
+							<div class="header-sideItemCon">
+								<div class="header-userSign">
+									<a>
+										</i>
+									</a>
+									<span id="nav_LR" class="header-sideItemTit"><a>登录</a>
+										<i class="cutline">|</i> <a>注册</a></span></div>
+								<!---->
+							</div>
+						</div>
+						<div class="qy-header-user-pop selected" style="display: none;">
+							<!---->
+						</div>
+					</div>
+					<div class="header-sideItem header-vip" id="nav_renewBtn">
+						<div class="header-sideItemCon">
+							<!----><span class="header-sideItemTit">开通</span>
+							<!---->
+						</div>
+
+					</div>
+					<div class="header-sideItem header-upload">
+						<div>
+							<div class="header-sideItemCon">
+								<a class="header-sideItemCon" href="https://www.iqiyi.com/upload?type=0"><i class="qy-svgicon qy-svgicon-upload"></i>
+									<span id="nav_uploadHref" class="header-sideItemTit">上传</span></a>
+							</div>
+						</div>
+
+					</div>
+					<div class="header-sideItem header-download" id="nav_appDown">
+						<div>
+							<div class="header-sideItemCon">
+								<span class="header-sideItemTit">客户端</span>
+								<!----><i class="qy-head-side-icon side-icon-pcatip"></i>
+							</div>
+						</div>
+
+					</div>
+					<div id="nav_message" class="header-sideItem header-info">
+						<a class="header-sideItemCon"><i class="qy-svgicon qy-svgicon-info"></i> <span class="header-sideItemTit">消息</span></a>
+
+					</div>
+					<div class="header-sideItem header-record" id="nav_recordsBtn">
+						<div>
+							<a class="header-sideItemCon" target="_blank" href="https://www.iqiyi.com/u/record"><i class="qy-svgicon qy-svgicon-record"></i>
+								<span class="header-sideItemTit">看过</span></a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="flashOutter" class="qy-play-top">
+		<div class="play-top-flash">
+			<div id="1000000000156" class="qy-adv-under"></div>
+			<div id="playerContainer" class="qy-play-container">
+				<div class="qy-player-wrap">
+					<div id="block-B" class="player-mn">
+						<div id="player-mnc" class="player-mnc">
+							<div class="qy-flash-box">
+								<div class="flash-box" id="flashbox">
+
+									<div class="iqp-player iqp-player-pc">
+										<!--video width="100%" height="100%" x-webkit-airplay="allow" src="https://bookwx.yishanxiang.com/upload/video/201809191646961.mp4" __idm_id__="187765761"></video-->
+										<video controls="controls" id="video" 　src="" width="100%" height="100%" poster="img/video_bg.png" controlslist="nodownload">
+											很抱歉，您的浏览器不支持播放标签!</video>
+
+										<div id="vip_model" class="qy-flash-box" style="display: none;">
+											<div class="qy-player-vippay-popup">
+												<div class="vippay-popup db-popup">
+													<div class="popup-main">
+														<p class="major-txt">尊敬的用户：<br>试看已结束，开通VIP会员免费完整观看本节目。</p>
+														<div class="btn-wrap">
+															<a href="javascript:void(0);" class="vippay-btn vippay-btn-major J_vipPayBtn" data-fcval="a9cd28c0ee0fd2ba">开通VIP会员免费看<span
+																 class="vippay-btn-tip">新客首三月6元/月</span></a>
+															<div class="link-tr">
+																<a href="javascript:;" class="vip-link J_singlePayBtn">5.0元购买&gt;</a>
+															</div>
+														</div>
+													</div>
+													<div class="popup-intro">
+														<div class="popup-code">
+															<div class="qy-player-vip-code">
+																<div class="code-border"><i class="border-tl"></i> <i class="border-br"></i></div>
+																<div class="code-con"><img src="img/movieBuyUnlogin.jpg" class="code-img">
+																	<div class="code-cover dn"><i class="qy-svgicon qy-svgicon-change"></i></div>
+																</div>
+															</div>
+															<div class="info-wrap">
+																<h3 class="info-title">扫一扫，轻松开会员！</h3>
+																<p class="info-gray">支付后刷新页面观看</p>
+															</div>
+														</div>
+														<div class="vip-popup-profit">
+															<h3 class="profit-h3">VIP会员尊享权益</h3>
+															<ul class="profit-list">
+																<li class="profit-item"><i class="sprite-player-pay free-con-icon"></i> <span class="profit-txt">免费片库</span></li>
+																<li class="profit-item"><i class="sprite-player-pay no-AD-icon"></i> <span class="profit-txt">跳过广告</span></li>
+																<li class="profit-item"><i class="sprite-player-pay vip-sign-icon"></i> <span class="profit-txt">尊贵身份</span></li>
+																<li class="profit-item"><i class="sprite-player-pay request-play-icon"></i> <span class="profit-txt">免费点播</span></li>
+															</ul>
+														</div>
+													</div>
+													<p class="no-login-tip J_loginFooter">已是会员或已购买？请
+														<a href="javascript:;" class="login-link J_login">登录观看&gt;</a>
+													</p>
+												</div>
+											</div>
+										</div><canvas width="450" height="150" style="display: none; pointer-events: none; width: auto; height: auto; position: absolute; z-index: 100000; top: 15px; left: 15px;"></canvas>
+
+									</div>
+								</div>
+							</div>
+							<div id="playList-hidden" class="player-icons"><span class="qy-play-icon unfold-icon"></span></div>
+							<div id="playList-show" class="player-icons" style="display: none;"><span class="qy-play-icon fold-icon"></span></div>
+						</div>
+					</div>
+					<aside id="block-D" class="player-sd" style="">
+						<div class="player-sdc">
+							<div class="qy-player-side-loading" style="display: none;"><img src="https://www.iqiyipic.com/common/fix/site-v4/con-loading-black.gif"
+								 alt="正在加载" class="loading-img">
+								<p class="loading-txt">正在加载…</p>
+							</div>
+							<div class="qy-player-side qy-movie-side">
+								<div class="qy-player-side-head">
+									<div class="head-title">
+										<h2 class="header-txt"><span class="header-link">大师兄</span></h2>
+
+									</div>
+									<!---->
+									<!---->
+								</div>
+								<div class="qy-player-side-body">
+									<div class="side-content">
+										<ul class="qy-play-list">
+											<li class="play-list-item">
+												<div class="mod-left">
+													<a title="大师兄" href="javascript:" class="mod-img-link">
+														<img src="img/v_119720038_m_601_220_124.jpg" class="mod-img">
+														<div class="icon-br">
+															<span class="qy-mod-label">共12节</span>
+														</div> <i class="img-border"></i>
+													</a>
+												</div>
+												<div class="mod-right">
+													<h3 class="main-title"><a rseat="80521_listbox_positive_title" href="" target="_blank" title="大师兄" class="title-link">大师兄</a></h3>
+													<div class="sub-title" style=""><span class="count">主讲老师：戴东</span></div>
+												</div>
+											</li>
+										</ul>
+
+										<div id="playList" class="qy-player-side-list">
+											<div class="qy-play-list-title">
+												<h3 class="list-title">视频列表(14)</h3>
+											</div>
+											<div id="mainBox">  
+												<div id="content">
+											<ul class="qy-play-list online-list">
+												<li class="play-list-item video-list" value="http://bookwx.yishanxiang.com/upload/video/201809191646961.mp4">
+													<div class="mod-left">
+														<span title="站内贴片-电影-大师兄-上线" class="mod-img-link"><img src="img/v_119720038_m_601_220_124.jpg" class="mod-img fadeOutIn-enter-active">
+															<!---->
+															<div class="icon-br"><span class="qy-mod-label">第一节</span></div> <i class="img-border"></i>
+														</span>
+													</div>
+													<div class="mod-right">
+														<h3 title="站内贴片-电影-大师兄-上线" class="main-title"><span 
+															 class="title-link">站内贴片-电影-大师兄-上线</span></h3>
+														<div class="sub-title" style=""><span class="count">361</span></div>
+													</div>
+												</li>
+												<li class="play-list-item video-list" value="http://bookwx.yishanxiang.com/upload/video/201810081702897.mp4">
+													<div class="mod-left">
+														<span title="大师兄-10月8月16点独播上线" class="mod-img-link"><img src="img/v_119720038_m_601_220_124.jpg" class="mod-img fadeOutIn-enter-active">
+															<!---->
+															<div class="icon-br"><span class="qy-mod-label">第一节</span></div> <i class="img-border"></i>
+														</span>
+													</div>
+													<div class="mod-right">
+														<h3 title="大师兄-10月8月16点独播上线" class="main-title"><span
+															 class="title-link">大师兄-10月8月16点独播上线</span></h3>
+														<div class="sub-title" style=""><span class="count">2518</span></div>
+													</div>
+												</li>
+												<li class="play-list-item video-list" value="http://bookwx.yishanxiang.com/upload/video/201809191649931.mp4">
+													<div class="mod-left">
+														<span title="《大师兄》曝体育课特辑 甄子丹三招解决校园暴力" class="mod-img-link"><img src="img/v_119720038_m_601_220_124.jpg"
+															 class="mod-img fadeOutIn-enter-active">
+															<!---->
+															<div class="icon-br"><span class="qy-mod-label">第一节</span></div> <i class="img-border"></i>
+														</span>
+													</div>
+													<div class="mod-right">
+														<h3 title="《大师兄》曝体育课特辑 甄子丹三招解决校园暴力" class="main-title"><span
+															 class="title-link">《大师兄》曝体育课特辑 甄子丹三招解决校园暴力</span></h3>
+														<div class="sub-title" style=""><span class="count">1152</span></div>
+													</div>
+												</li>
+												<li class="play-list-item video-list" value="http://bookwx.yishanxiang.com/upload/video/201809191646961.mp4">
+													<div class="mod-left">
+														<span title="站内贴片-电影-大师兄-上线" class="mod-img-link"><img src="img/v_119720038_m_601_220_124.jpg" class="mod-img fadeOutIn-enter-active">
+															<!---->
+															<div class="icon-br"><span class="qy-mod-label">第一节</span></div> <i class="img-border"></i>
+														</span>
+													</div>
+													<div class="mod-right">
+														<h3 title="站内贴片-电影-大师兄-上线" class="main-title"><span
+															 class="title-link">站内贴片-电影-大师兄-上线</span></h3>
+														<div class="sub-title" style=""><span class="count">361</span></div>
+													</div>
+												</li>
+												<li class="play-list-item video-list" value="http://bookwx.yishanxiang.com/upload/video/201810081702897.mp4">
+													<div class="mod-left">
+														<span title="大师兄-10月8月16点独播上线" class="mod-img-link"><img src="img/v_119720038_m_601_220_124.jpg" class="mod-img fadeOutIn-enter-active">
+															<!---->
+															<div class="icon-br"><span class="qy-mod-label">第一节</span></div> <i class="img-border"></i>
+														</span>
+													</div>
+													<div class="mod-right">
+														<h3 title="大师兄-10月8月16点独播上线" class="main-title"><span
+															 class="title-link">大师兄-10月8月16点独播上线</span></h3>
+														<div class="sub-title" style=""><span class="count">2518</span></div>
+													</div>
+												</li>
+												<li class="play-list-item video-list" value="http://bookwx.yishanxiang.com/upload/video/201809191649931.mp4">
+													<div class="mod-left">
+														<span title="《大师兄》曝体育课特辑 甄子丹三招解决校园暴力" class="mod-img-link"><img src="img/v_119720038_m_601_220_124.jpg"
+															 class="mod-img fadeOutIn-enter-active">
+															<!---->
+															<div class="icon-br"><span class="qy-mod-label">第一节</span></div> <i class="img-border"></i>
+														</span>
+													</div>
+													<div class="mod-right">
+														<h3 title="《大师兄》曝体育课特辑 甄子丹三招解决校园暴力" class="main-title"><span
+															 class="title-link">《大师兄》曝体育课特辑 甄子丹三招解决校园暴力</span></h3>
+														<div class="sub-title" style=""><span class="count">1152</span></div>
+													</div>
+												</li>
+												<li class="play-list-item video-list" value="http://bookwx.yishanxiang.com/upload/video/201809191646961.mp4">
+													<div class="mod-left">
+														<span title="站内贴片-电影-大师兄-上线" class="mod-img-link"><img src="img/v_119720038_m_601_220_124.jpg" class="mod-img fadeOutIn-enter-active">
+															<!---->
+															<div class="icon-br"><span class="qy-mod-label">第一节</span></div> <i class="img-border"></i>
+														</span>
+													</div>
+													<div class="mod-right">
+														<h3 title="站内贴片-电影-大师兄-上线" class="main-title"><span
+															 class="title-link">站内贴片-电影-大师兄-上线</span></h3>
+														<div class="sub-title" style=""><span class="count">361</span></div>
+													</div>
+												</li>
+												
+												<!--<div class="side-scrollbar">
+													<div class="scrollbar" style=" height: 128.583px; margin-top: 0px;"></div>
+												</div>-->
+
+											</ul>
+											</div>
+											</div>
+										</div>
+										<div id="widget-videorezebra" class="qy-player-side-list">
+											<div class="qy-play-list-title">
+												<h3 class="list-title">相关视频(2)</h3>
+											</div>
+											<ul class="qy-play-list">
+												<li class="play-list-item" show-description="true">
+													<div class="mod-left">
+														<a href="https://www.iqiyi.com/v_19rqyamkao.html#vfrm=3-2-zebra-1" title="甄子丹《大师兄》的由来" class="mod-img-link"><img
+															 src="img/v_119720038_m_601_220_124.jpg" class="mod-img">
+															<!---->
+															<div class="icon-br"><span class="qy-mod-label">15:41</span></div> <i class="img-border"></i>
+														</a>
+													</div>
+													<div class="mod-right">
+														<h3 title="甄子丹《大师兄》的由来" class="main-title"><a title="甄子丹《大师兄》的由来" class="title-link">甄子丹《大师兄》的由来</a></h3>
+														<div class="sub-title"><span class="count">805</span></div>
+													</div>
+												</li>
+												<li class="play-list-item" show-description="true">
+													<div class="mod-left">
+														<a href="https://www.iqiyi.com/v_19rqyamkao.html#vfrm=3-2-zebra-1" title="甄子丹《大师兄》的由来" class="mod-img-link"><img
+															 src="img/v_119720038_m_601_220_124.jpg" class="mod-img">
+															<!---->
+															<div class="icon-br"><span class="qy-mod-label">15:41</span></div> <i class="img-border"></i>
+														</a>
+													</div>
+													<div class="mod-right">
+														<h3 title="甄子丹《大师兄》的由来" class="main-title"><a title="甄子丹《大师兄》的由来" class="title-link">甄子丹《大师兄》的由来</a></h3>
+														<div class="sub-title"><span class="count">805</span></div>
+													</div>
+												</li>
+
+											</ul>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</aside>
+
+				</div>
+				<div id="block-C" class="qy-player-info-area">
+					<div class="qy-player-detail">
+						<div class="qy-player-detail-con">
+							<div class="detail-mn">
+								<div class="detail-mnc">
+									<div class="detail-left">
+										<div class="qy-player-title title-score">
+											<h1 class="player-title play-tit-width">
+												<!---->
+												<!----> <span id="widget-videotitle">大师兄</span></h1>
+											<article class="qy-player-score">
+												<div class="score-top"><span class="score-new">7.5</span> <span class="qy-play-icon arrow979-icon"></span>
+													<span class="score-user-num">54.3万人评分</span> <i class="score-split-line"></i> <span class="score-my"><i
+														 class="score-gray-star"><i class=""></i></i> <span class="score-my-num tr">未评分</span></span>
+												</div>
+
+											</article>
+										</div>
+										<div id="titleRow" class="qy-player-intro">
+											<div class="intro-mn">
+												<div class="intro-mnc">
+													<div class="qy-player-basic-intro">
+														<article class="basic-item basic-item qy-player-VV">
+															<div><span class="basic-title">热度</span><span class="basic-txt">6382</span></div>
+														</article>
+														<div class="basic-item qy-player-brief">
+															<span class="basic-txt">
+																影片简介
+															</span>
+														</div>
+													</div>
+													<div class="qy-player-tag" style="">
+														<a title="院线" class="tag-item">院线</a>
+														<a title="香港" class="tag-item">香港</a>
+														<a title="动作" class="tag-item">动作</a>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<aside class="detail-sd">
+								<div class="qy-player-pca">
+									<span>
+										<a href="javascript:void(0);" title="1080P免费畅享">
+											<img src="img/pca1.png" alt="1080P免费畅享" class="pca-img">
+										</a>
+									</span>
+								</div>
+							</aside>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="qy-play-container">
+		<div id="contentArea" class="qy-play-con">
+			<div class="play-con-mn">
+				<div class="play-con-mnc">
+
+					<div title="猜你喜欢" id="block-G" class="qy-mod-wrap">
+						<div class="qy-mod-title">
+							<h3 class="mod-title">
+								猜你喜欢
+							</h3>
+							<div class="qy-mod-change">
+								<span class="change-txt">换一换</span></div>
+						</div>
+						<div class="qy-mod-list qy-mod-list-wrap qy-mod-list-vt">
+							<ul class="qy-mod-ul qy-mod-ul-collect">
+								<li class="qy-mod-li" index="1">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rr7p19oc.html" title="巨齿鲨" target="_blank" class="qy-mod-link"><img src="img/v_115972442_m_601_m1_260_360.jpg"
+												 class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img src="img/vip_100000_v_601_0_21.png"></div>
+												<div class="icon-br"><span class="qy-mod-label"></span></div>
+											</a>
+										</div>
+										<div title="巨齿鲨" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">巨齿鲨</a>
+											</p>
+											<div class="handle">
+												<p title="史前巨鲨来袭" class="sub">史前巨鲨来袭</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="qy-mod-li" index="2">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rqzjlm2o.html" title="爱奇艺爱电影" target="_blank" class="qy-mod-link"><img
+												 src="img/v_115972442_m_601_m1_260_360.jpg" class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img src="img/only.png"></div>
+												<div class="icon-br"><span class="qy-mod-label">08-26期</span></div>
+											</a>
+										</div>
+										<div title="爱奇艺爱电影" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">爱奇艺爱电影</a>
+											</p>
+											<div class="handle">
+												<p title="甄子丹真情打造" class="sub">甄子丹真情打造</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="qy-mod-li" index="3">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rr4y93zw.html" title="弹指神通" target="_blank" class="qy-mod-link"><img src="img/v_115991827_m_601_m5_260_360.jpg"
+												 class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img src="img/vip_100000_v_601_0_21.png"></div>
+												<div class="icon-br"><span class="qy-mod-label"></span></div>
+											</a>
+										</div>
+										<div title="弹指神通" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">弹指神通</a>
+											</p>
+											<div class="handle">
+												<p title="弹指神通" class="sub">弹指神通</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="qy-mod-li" index="4">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rrcgmlfg.html" title="快把我哥带走" target="_blank" class="qy-mod-link"><img
+												 src="https://pic0.iqiyipic.com/image/20180930/4e/0d/v_115425986_m_601_m7_260_360.jpg" class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img src="img/vip_100000_v_601_0_21.png"></div>
+												<div class="icon-br"><span class="qy-mod-label"></span></div>
+											</a>
+										</div>
+										<div title="快把我哥带走" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">快把我哥带走</a>
+											</p>
+											<div class="handle">
+												<p title="张子枫彭昱畅互怼" class="sub">张子枫彭昱畅互怼</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="qy-mod-li" index="5">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rr7p4vfo.html" title="苏丹" target="_blank" class="qy-mod-link"><img src="https://pic9.iqiyipic.com/image/20181005/36/e9/v_112874737_m_601_m14_260_360.jpg"
+												 class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img src="img/vip_100000_v_601_0_21.png"></div>
+												<div class="icon-br"><span class="qy-mod-label"></span></div>
+											</a>
+										</div>
+										<div title="苏丹" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">苏丹</a>
+											</p>
+											<div class="handle">
+												<p title="萨尔曼汗为爱摔跤" class="sub">萨尔曼汗为爱摔跤</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="qy-mod-li" index="6">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rqzlrojs.html" title="梨花说片片" target="_blank" class="qy-mod-link"><img src="https://pic9.iqiyipic.com/image/20180209/c4/01/a_100112231_m_601_m2_260_360.jpg"
+												 class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img></div>
+												<div class="icon-br"><span class="qy-mod-label">08-24期</span></div>
+											</a>
+										</div>
+										<div title="梨花说片片" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">梨花说片片</a>
+											</p>
+											<div class="handle">
+												<p title="TVB老戏骨云集" class="sub">TVB老戏骨云集</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="qy-mod-li" index="7">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rr5ma1no.html" title="龙女敖娇" target="_blank" class="qy-mod-link"><img src="https://pic4.iqiyipic.com/image/20181008/22/2e/v_119440664_m_601_m2_260_360.jpg"
+												 class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img src="img/vip_100000_v_601_0_21.png"></div>
+												<div class="icon-br"><span class="qy-mod-label"></span></div>
+											</a>
+										</div>
+										<div title="龙女敖娇" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">龙女敖娇</a>
+											</p>
+											<div class="handle">
+												<p title="龙女敖娇" class="sub">龙女敖娇</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="qy-mod-li" index="8">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rr05tu6s.html" title="狄仁杰之幽冥道" target="_blank" class="qy-mod-link"><img
+												 src="https://pic5.iqiyipic.com/image/20181008/3e/7e/v_118881982_m_601_m4_260_360.jpg" class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img src="img/vip_100000_v_601_0_21.png"></div>
+												<div class="icon-br"><span class="qy-mod-label"></span></div>
+											</a>
+										</div>
+										<div title="狄仁杰之幽冥道" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">狄仁杰之幽冥道</a>
+											</p>
+											<div class="handle">
+												<p title="狄仁杰之幽冥道" class="sub">狄仁杰之幽冥道</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="qy-mod-li" index="9">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rr8u7dl4.html" title="动物世界" target="_blank" class="qy-mod-link"><img src="https://pic8.iqiyipic.com/image/20180928/b2/83/v_113554400_m_601_m10_260_360.jpg"
+												 class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img src="img/vip_100000_v_601_0_21.png"></div>
+												<div class="icon-br"><span class="qy-mod-label"></span></div>
+											</a>
+										</div>
+										<div title="动物世界" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">动物世界</a>
+											</p>
+											<div class="handle">
+												<p title="李易峰赌场搏命" class="sub">李易峰赌场搏命</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="qy-mod-li" index="10">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rr85oms0.html" title="耐撕大片精华" target="_blank" class="qy-mod-link"><img
+												 src="https://pic4.iqiyipic.com/image/20180129/61/78/a_100047220_m_601_m1_260_360.jpg" class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img></div>
+												<div class="icon-br"><span class="qy-mod-label">08-15期</span></div>
+											</a>
+										</div>
+										<div title="耐撕大片精华" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">耐撕大片精华</a>
+											</p>
+											<div class="handle">
+												<p title="甄子丹被下属凌虐" class="sub">甄子丹被下属凌虐</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="qy-mod-li" index="11">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rrcmj9mw.html" title="一个人的江湖" target="_blank" class="qy-mod-link"><img
+												 src="https://pic0.iqiyipic.com/image/20180807/2f/ee/v_115991827_m_601_m5_260_360.jpg" class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img src="img/vip_100000_v_601_0_21.png"></div>
+												<div class="icon-br"><span class="qy-mod-label"></span></div>
+											</a>
+										</div>
+										<div title="一个人的江湖" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">一个人的江湖</a>
+											</p>
+											<div class="handle">
+												<p title="仗剑少年闯天下" class="sub">仗剑少年闯天下</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="qy-mod-li" index="12">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rrk3334w.html" title="武侠" target="_blank" class="qy-mod-link"><img src="https://pic4.iqiyipic.com/image/20180921/43/2f/v_50123147_m_601_m10_260_360.jpg"
+												 class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img src="img/vip_100000_v_601_0_21.png"></div>
+												<div class="icon-br"><span class="qy-mod-label"></span></div>
+											</a>
+										</div>
+										<div title="武侠" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">武侠</a>
+											</p>
+											<div class="handle">
+												<p title="陈可辛迷走江湖战英雄" class="sub">陈可辛迷走江湖战英雄</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="qy-mod-li" index="13">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rrk0ywq8.html" title="洗黑钱" target="_blank" class="qy-mod-link"><img src="https://pic9.iqiyipic.com/image/20180919/c3/17/v_50150863_m_601_m3_260_360.jpg"
+												 class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img src="img/vip_100000_v_601_0_21.png"></div>
+												<div class="icon-br"><span class="qy-mod-label"></span></div>
+											</a>
+										</div>
+										<div title="洗黑钱" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">洗黑钱</a>
+											</p>
+											<div class="handle">
+												<p title="甄子丹首做武术指导" class="sub">甄子丹首做武术指导</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="qy-mod-li" index="14">
+									<div class="qy-mod-img vertical">
+										<div class="qy-mod-link-wrap">
+											<a href="https://www.iqiyi.com/v_19rrjcefcs.html" title="情逢敌手" target="_blank" class="qy-mod-link"><img src="https://pic7.iqiyipic.com/image/20180211/44/7f/v_50073236_m_601_m3_260_360.jpg"
+												 class="qy-mod-cover fadeOutIn-enter-active">
+												<div class="icon-tr"><img src="img/vip_100000_v_601_0_21.png"></div>
+												<div class="icon-br"><span class="qy-mod-label"></span></div>
+											</a>
+										</div>
+										<div title="情逢敌手" class="title-wrap">
+											<p class="main">
+												<a class="link-txt">情逢敌手</a>
+											</p>
+											<div class="handle">
+												<p title="甄子丹引领霹雳舞热潮" class="sub">甄子丹引领霹雳舞热潮</p>
+
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<article id="1000000000730" class="qy-mod-li qy-g-wrap" style="display: none;">
+								<div class="qy-mod-img vertical">
+									<div class="qy-mod-link-wrap">
+										<a target="_blank" class="qy-mod-link"><img class="qy-mod-cover fadeOutIn-enter-active">
+											<div class="icon-tr"></div>
+											<!---->
+										</a>
+									</div>
+									<div class="title-wrap">
+										<p class="main">
+											<a class="link-txt"></a>
+										</p>
+										<p class="sub"></p>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<aside class="play-con-sd">
+
+				<article>
+					<div id="block-L" class="qy-mod-wrap">
+						<div class="qy-mod-title">
+							<h3 class="mod-title">电影简介</h3>
+						</div>
+						<div class="qy-play-side-introduction vInfoSide_vNCon">
+
+							<div class="vInfoSide_bot">
+								<div class="videoInfo_jj">
+									<div><span class="color_999">简介：</span>陈侠，一位初出茅庐的教师，他的学生全是品学皆劣的边缘青年，陈侠运用非常教学的手法，从家访、投其所好、甚至修补各人的家庭关系，化解每位学生的问题，最终把全班学生收服!一切向...
+										<span id="intro" class="works_linkMore">展开&gt;</span>
+									</div>
+									<div style="display: none;"><span class="color_999">简介：</span>陈侠，一位初出茅庐的教师，他的学生全是品学皆劣的边缘青年，陈侠运用非常教学的手法，从家访、投其所好、甚至修补各人的家庭关系，化解每位学生的问题，最终把全班学生收服!一切向好之际，陈侠遇到黑道人物鹰哥，为了学生，陈侠跟鹰哥展开一场守护学生前途的终极大战!
+										<span id="intro_program_more1" class="works_linkMore">收起&gt;</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</article>
+			</aside>
+		</div>
+	</div>
+	<div data-block-name="页底" id="block-AR" class="qy-footer-channel">
+		<div class="footer-content">
+			<div class="channel-footer-warp">
+				<div class="channel-footer-menu">
+					<a href="https://www.iqiyi.com/common/aboutus.html" title="公司介绍" target="_blank" class="footer-menu-link">公司介绍</a>
+					<i class="footer-line">|</i>
+					<a href="https://www.iqiyi.com/common/news.html" title="新闻动态" target="_blank" class="footer-menu-link">新闻动态</a> <i
+					 class="footer-line">|</i>
+					<a href="https://www.iqiyi.com/common/contactus.html" title="联系方式" target="_blank" class="footer-menu-link">联系方式</a>
+					<i class="footer-line">|</i>
+					<a href="https://zhaopin.iqiyi.com" title="招聘英才" target="_blank" class="footer-menu-link">招聘英才</a>
+					<i class="footer-line">|</i>
+					<a href="https://labs.iqiyi.com" title="爱奇艺实验室" target="_blank" class="footer-menu-link">爱奇艺实验室</a>
+					<i class="footer-line">|</i>
+					<a href="https://open.iqiyi.com/" title="开放平台" target="_blank" class="footer-menu-link">开放平台</a>
+					<i class="footer-line">|</i>
+					<a href="https://www.iqiyi.com/common/rz.html" title="爱奇艺号认证" target="_blank" class="footer-menu-link">爱奇艺号认证</a>
+					<i class="footer-line">|</i>
+					<a href="https://mp.iqiyi.com/" title="爱奇艺号" target="_blank" class="footer-menu-link">爱奇艺号</a>
+					<i class="footer-line">|</i>
+					<a href="https://www.iqiyi.com/hezuo.html" title="爱奇艺会员合作" target="_blank" class="footer-menu-link">爱奇艺会员合作</a> <i
+					 class="footer-line">|</i>
+					<a href="https://help.iqiyi.com/" title="帮助中心" target="_blank" class="footer-menu-link">帮助中心</a>
+					<i class="footer-line">|</i>
+					<a href="https://www.iqiyi.com/common/copyright.html?entry=iqiyi" title="侵权投诉" target="_blank" class="footer-menu-link">侵权投诉</a>
+					<i class="footer-line">|</i>
+					<a href="https://www.iqiyi.com/user/register/protocol.html " title="用户协议" target="_blank" class="footer-menu-link">用户协议</a>
+					<i class="footer-line">|</i>
+					<a href="https://www.iqiyi.com/common/secret.html" title="隐私政策" target="_blank" class="footer-menu-link">隐私政策</a>
+					<i class="footer-line">|</i>
+					<a href="https://www.iqiyi.com/common/20100420/n4813.html" title="AboutUs" target="_blank" class="footer-menu-link">About
+						Us
+					</a>
+				</div>
+				<div class="footer-copyright">
+					<a href="https://www.iqiyi.com/common/announce.html" target="blank" class="copyright-lk">反盗版和反盗链权利声明</a>&nbsp;&nbsp;&nbsp;
+					Copyright © 2018
+					<a href="https://www.iqiyi.com" title="爱奇艺" target="_blank" class="copyright-lk">爱奇艺</a> <span>All Rights
+						Reserved</span></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
