@@ -12,12 +12,12 @@
 		<!--begin::Web font -->
 		<link href="assets/vendors/base/ress-font.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="assets/vendors/base/ress-font.js"></script>
-		<link rel="stylesheet" type="text/css" href="assets/css/ress.css" />
 		<!--end::Web font -->
 
 		<!--begin::Base Styles -->
 		<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/swal2.css" />
 		<link rel="stylesheet" href="assets/css/responsive-style.css">
 		<!--end::Base Styles -->
 
@@ -657,185 +657,59 @@
 				</div>
 				<!-- END: Left Aside -->
 				<div class="m-grid__item m-grid__item--fluid m-wrapper">
-					<!-- BEGIN: Subheader -->
-					<div class="m-subheader ">
-						<div class="d-flex align-items-center">
-							<div class="mr-auto">
-								<h3 class="m-subheader__title ">图片列表</h3>
-							</div>
+
+					<div class="swal2-popup swal2-modal swal2-show" style="width: 700px; padding: 2.5rem; display: flex; left: calc(50% - 350px); top: 30%;">
+						<div class="swal2-header">
+							<!--信息标题------>
+							<h2 class="swal2-title" id="swal2-title" style="display: flex;">这是标题</h2>
+							<!--关闭按钮------>
+							<button type="button" class="swal2-close" style="display: flex;">×</button>
+						</div>
+						<!--信息内容------>
+						<div class="swal2-content">
+							<form class="m-form m-form--state">
+								<div class="m-portlet__body">
+									<div class="form-group m-form__group has-success row">
+										<label class="col-form-label col-lg-3" for="inputSuccess1">正常提交框</label>
+										<div class="col-lg-9">
+											<input type="text" class="form-control m-input" id="inputSuccess1">
+											<div class="form-control-feedback">正常提示</div>
+											<span class="m-form__help">正常提示信息.</span>
+										</div>
+									</div>
+									<div class="form-group m-form__group has-warning row">
+										<label class="col-form-label col-lg-3" for="inputWarning1">警告提交框</label>
+										<div class="col-lg-9">
+											<input type="text" class="form-control m-input" id="inputWarning1">
+											<div class="form-control-feedback">警告提示</div>
+											<span class="m-form__help">警告提示信息.</span>
+										</div>
+									</div>
+									<div class="form-group m-form__group has-danger row">
+										<label class="col-form-label col-lg-3" for="inputDanger1">错误提交框</label>
+										<div class="col-lg-9">
+											<input type="text" class="form-control m-input" id="inputDanger1">
+											<div class="form-control-feedback">错误提示</div>
+											<span class="m-form__help">错误提示信息</span>
+										</div>
+									</div>
+								</div>
+								<div class="m-portlet__foot m-portlet__foot--fit">
+									<div class="m-form__actions m-form__actions">
+										<div class="row">
+											<div class="col-lg-9 ml-lg-auto">
+												<button type="submit" class="btn btn-success  m-btn m-btn--custom">确定</button>
+												<button type="submit" class="btn btn-secondary  m-btn m-btn--custom">取消</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="swal2-actions" style="display: flex;">
 
 						</div>
-					</div>
-					<!-- END: Subheader -->
-					<div class="m-content">
-						<!--Begin::Section-->
-						<div class="m-portlet m-portlet--mobile">
-							<div class="m-portlet__head">
-								<div class="m-portlet__head-caption">
-									<div class="m-portlet__head-title">
-										<h3 class="m-portlet__head-text">
-					上传图片列表
-				</h3>
-									</div>
-								</div>
-
-							</div>
-							<div class="m-portlet__body">
-								<!--begin: Search Form -->
-								<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
-									<div class="row align-items-center">
-										<div class="col-xl-4 ">
-											<a href="#" class="btn btn-info m-btn ">
-												<span>
-							<i class="ress ress-shangchuan"></i>
-							<span>上传图片</span>
-												</span>
-											</a>
-											<a href="#" class="btn btn-outline-info m-btn ">
-												<span>
-							<i class="ress ress-shanchu"></i>
-							<span>删除</span>
-												</span>
-											</a>
-											<div class="m-separator m-separator--dashed d-xl-none"></div>
-										</div>
-										<div class="col-xl-2"></div>
-										<div class="col-xl-6 ">
-											<div class="form-group m-form__group row align-items-center">
-												<div class="col-md-6">
-
-													<div class="input-daterange input-group" id="m_datepicker_5">
-														<label class="col-form-label ">请选择时间： </label>
-														<input type="text" class="form-control m-input" name="start" />
-														<div class="input-group-append">
-															<span class="input-group-text">-</span>
-														</div>
-														<input type="text" class="form-control" name="end" />
-													</div>
-													<div class="d-md-none m--margin-bottom-10"></div>
-												</div>
-
-												<div class="col-md-6">
-													<div class="m-input-icon m-input-icon--left">
-														<input type="text" class="form-control m-input" placeholder="Search..." id="generalSearch">
-														<span class="m-input-icon__icon m-input-icon__icon--left">
-									<span><i class="la la-search"></i></span>
-														</span>
-													</div>
-												</div>
-											</div>
-										</div>
-
-									</div>
-								</div>
-								<!--end: Search Form -->
-
-								<!--begin: Datatable -->
-								<div class="row">
-									<div class="col-xl-3">
-										<div class="media-box ">
-											<img src="http://www.yibo365.cn/statics/2017-red/images/chanpin/sn-koucai-9.jpg" alt="" />
-											<h3 class="media-title">儿童基础知识第一颗1</h3>
-											<div class="media-cont">
-												<span>上传时间：2018-09-20 14:23</span>
-												<span>文件大小：1.25G</span>
-												<span>图片来源：用户上传</span>
-											</div>
-											<span class="media-hover"><i class="ress ress-gouxuan"></i></span>
-											<span class="media-on"><i class="ress ress-gouxuan"></i></span>
-										</div>
-
-									</div>
-									<div class="col-xl-3">
-										<div class="media-box  m-media-active ">
-											<img src="http://www.yibo365.cn/statics/2017-red/images/chanpin/sn-koucai-9.jpg" alt="" />
-											<h3 class="media-title">儿童基础知识第一颗2</h3>
-											<div class="media-cont">
-												<span>上传时间：2018-09-20 14:23</span>
-												<span>文件大小：1.25G</span>
-												<span>图片来源：用户上传</span>
-											</div>
-											<span class="media-hover"><i class="ress ress-gouxuan" ></i></span>
-											<span class="media-on"><i class="ress ress-gouxuan"></i></span>
-										</div>
-
-									</div>
-									<div class="col-xl-3">
-										<div class="media-box ">
-											<img src="http://www.yibo365.cn/uploadfile/2015/1222/thumb_417_218_20151222051101141.jpg" alt="" />
-											<h3 class="media-title">儿童基础知识第一颗3</h3>
-											<div class="media-cont">
-												<span>上传时间：2018-09-20 14:23</span>
-												<span>文件大小：1.25G</span>
-												<span>图片来源：用户上传</span>
-											</div>
-											<span class="media-hover"><i class="ress ress-gouxuan" ></i></span>
-											<span class="media-on"><i class="ress ress-gouxuan"></i></span>
-										</div>
-
-									</div>
-									<div class="col-xl-3">
-										<div class="media-box ">
-											<a href="#"><img src="http://www.yibo365.cn/uploadfile/2017/1128/thumb_366_296_20171128144117f9b50463ad583e8bfce1599306f89b78.jpg" alt="" /></a>
-											<h3 class="media-title">儿童基础知识第一颗4</h3>
-											<div class="media-cont">
-												<span>上传时间：2018-09-20 14:23</span>
-												<span>文件大小：1.25G</span>
-												<span>图片来源：用户上传</span>
-											</div>
-											<span class="media-hover"><i class="ress ress-gouxuan"></i></span>
-											<span class="media-on"><i class="ress ress-gouxuan"></i></span>
-										</div>
-
-									</div>
-									<div class="col-xl-3">
-										<div class="media-box ">
-											<img src="http://www.yibo365.cn/statics/2017-red/images/chanpin/sn-koucai-9.jpg" alt="" />
-											<h3 class="media-title">儿童基础知识第一颗</h3>
-											<div class="media-cont">
-												<span>上传时间：2018-09-20 14:23</span>
-												<span>文件大小：1.25G</span>
-												<span>图片来源：用户上传</span>
-											</div>
-											<span class="media-hover"><i class="ress ress-gouxuan"></i></span>
-											<span class="media-on"><i class="ress ress-gouxuan"></i></span>
-										</div>
-
-									</div>
-									<div class="col-xl-3">
-										<div class="media-box ">
-											<img src="http://www.yibo365.cn/statics/2017-red/images/chanpin/sn-koucai-9.jpg" alt="" />
-											<h3 class="media-title">儿童基础知识第一颗</h3>
-											<div class="media-cont">
-												<span>上传时间：2018-09-20 14:23</span>
-												<span>文件大小：1.25G</span>
-												<span>图片来源：用户上传</span>
-											</div>
-											<span class="media-hover"><i class="ress ress-gouxuan"></i></span>
-											<span class="media-on"><i class="ress ress-gouxuan"></i></span>
-										</div>
-
-									</div>
-									<div class="col-xl-3">
-										<div class="media-box ">
-											<img src="http://www.yibo365.cn/statics/2017-red/images/chanpin/sn-koucai-9.jpg" alt="" />
-											<h3 class="media-title">儿童基础知识第一颗</h3>
-											<div class="media-cont">
-												<span>上传时间：2018-09-20 14:23</span>
-												<span>文件大小：1.25G</span>
-												<span>图片来源：用户上传</span>
-											</div>
-											<span class="media-hover"><i class="ress ress-gouxuan"></i></span>
-											<span class="media-on"><i class="ress ress-gouxuan"></i></span>
-										</div>
-
-									</div>
-								</div>
-								<!--end: Datatable -->
-							</div>
-						</div>
-						<!--End::Section-->
-
+						<div class="swal2-footer" style="display: block;"></div>
 					</div>
 				</div>
 
@@ -884,6 +758,7 @@
 		
 		<script src="assets/vendors/base/scripts.bundle.js" type="text/javascript"></script>
 		<!--end::Base Scripts -->
+
 	</body>
 	<!-- end::Body -->
 

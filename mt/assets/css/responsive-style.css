@@ -89,6 +89,9 @@ router-outlet {
 .m--margin-top-20 {
     margin-top: 20px !important;
 }
+.m--margin-bottom-10 {
+	margin-bottom: 10px !important;
+}
 .m--img-rounded {
     border-radius: 50%;
 }
@@ -9269,7 +9272,7 @@ td>.m-checkbox.m-checkbox--single {
 	background-color: #f7f8fa;
 	border-color: #f7f8fa
 }
-/*
+
 .has-success label:not([class]),
 .has-success label.col-form-label,
 .has-success label.form-control-label {
@@ -9304,9 +9307,9 @@ td>.m-checkbox.m-checkbox--single {
 .m-form.m-form--state .has-success .bootstrap-select.btn-group.btn.btn-secondary:hover,
 .m-form.m-form--state .has-success .input-group-btn>.btn.btn-secondary:hover {
 	border-color: #34bfa3
-}*/
+}
 
-/*.has-warning label:not([class]),
+.has-warning label:not([class]),
 .has-warning label.col-form-label,
 .has-warning label.form-control-label {
 	color: #ffb822
@@ -9340,9 +9343,9 @@ td>.m-checkbox.m-checkbox--single {
 .m-form.m-form--state .has-warning .bootstrap-select.btn-group.btn.btn-secondary:hover,
 .m-form.m-form--state .has-warning .input-group-btn>.btn.btn-secondary:hover {
 	border-color: #ffb822
-}*/
+}
 
-/*.has-danger label:not([class]),
+.has-danger label:not([class]),
 .has-danger label.col-form-label,
 .has-danger label.form-control-label {
 	color: #f4516c
@@ -9376,7 +9379,7 @@ td>.m-checkbox.m-checkbox--single {
 .m-form.m-form--state .has-danger .bootstrap-select.btn-group.btn.btn-secondary:hover,
 .m-form.m-form--state .has-danger .input-group-btn>.btn.btn-secondary:hover {
 	border-color: #f4516c
-}*/
+}
 
 
 .table th {

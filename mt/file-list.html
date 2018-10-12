@@ -7,18 +7,19 @@
 
 		<title>RESS管理系统</title>
 		<meta name="description" content="Latest updates and statistic charts">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 		<!--begin::Web font -->
 		<link href="assets/vendors/base/ress-font.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="assets/vendors/base/ress-font.js"></script>
-		<link rel="stylesheet" type="text/css" href="assets/css/ress.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/ress.css" />
 		<!--end::Web font -->
-		
+
 		<!--begin::Base Styles -->
 		<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="assets/css/responsive-style.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/swal2.css" />
 		<!--end::Base Styles -->
 
 		<link rel="shortcut icon" href="assets/img/logo/favicon.ico" />
@@ -574,7 +575,7 @@
 												<span class="m-menu__link-text">图片上传设置</span>
 											</a>
 										</li>
-										
+
 										<li class="m-menu__item " aria-haspopup="true">
 											<a href="set.html" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
@@ -768,7 +769,7 @@
 
 												<div class="col-md-6">
 													<div class="m-input-icon m-input-icon--left">
-														<input type="text" class="form-control m-input" placeholder="Search..." id="generalSearch">
+														<input type="text" class="form-control m-input border-primary" placeholder="Search..." id="generalSearch">
 														<span class="m-input-icon__icon m-input-icon__icon--left">
 									<span><i class="la la-search"></i></span>
 														</span>
@@ -874,6 +875,48 @@
 
 								</table>
 								<!--end: Datatable -->
+								<ul class="pagination">
+									<li>
+										<div onclick="#">首 页</div>
+									</li>
+									<li>
+										<div onclick="#">上一页</div>
+									</li>
+									<li class="active">
+										<div onclick="#">1</div>
+									</li>
+									<li class="disabled">
+										<div onclick="#">2</div>
+									</li>
+									<li>
+										<div onclick="#">3</div>
+									</li>
+									<li>
+										<div onclick="#">4</div>
+									</li>
+									<li>
+										<div onclick="#">5</div>
+									</li>
+									<li class="disabled">
+										<div onclick="#">...</div>
+									</li>
+									<li>
+										<div onclick="#">下一页</div>
+									</li>
+									<li>
+										<span>共<i>18</i>页 / <i>180条数据</i></span>
+									</li>
+									<li>
+										<span><i>跳转到
+										<input type="text" name="pagenum" id="" value="1" />
+										页
+										</i></span>
+									</li>
+									<li>
+										<a href="" class="btn m-btn btn-info">确定</a>
+									</li>
+								</ul>
+								
 							</div>
 						</div>
 						<!--End::Section-->
@@ -915,14 +958,17 @@
 		</div>
 		<!-- end:: Page -->
 
-		
 		<!-- begin::Scroll Top -->
 		<div id="m_scroll_top" class="m-scroll-top">
 			<i class="ress ress-shangla"></i>
 		</div>
 		<!-- end::Scroll Top -->
 		<!--begin::Base Scripts -->
-		<script src="assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+		<script src="assets/vendors/base/svg.js" type="text/javascript" charset="utf-8"></script>
+		
 		<script src="assets/vendors/base/scripts.bundle.js" type="text/javascript"></script>
 		<!--end::Base Scripts -->
 
