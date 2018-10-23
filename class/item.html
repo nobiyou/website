@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+	</head>
+	<style type="text/css">
+		.class-item {
+			border-bottom: 1px solid #ddd;
+			background: #fff;
+		}
+		
+		.class-item:not(:first-child) {
+			margin-top: 5px;
+		}
+		
+		.class-item-hd {
+			background-color: #eee;
+			color: #444;
+			cursor: pointer;
+			padding: 18px;
+			border: none;
+			text-align: left;
+			outline: none;
+			padding-left: 25px;
+			transition: 0.4s;
+		}
+		
+		.class-item.active .class-item-hd,
+		.class-item-hd:hover {
+			background-color: #ddd;
+		}
+		
+		.class-item-bd {
+			padding: 0 18px;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+		}
+		
+		.class-item-hd:after {
+			content: '\002B';
+			color: #777;
+			font-weight: bold;
+			float: left;
+			margin-left: 5px;
+			position: absolute;
+			left: 15px;
+		}
+		
+		.class-item.active .class-item-hd:after {
+			content: "\2212";
+		}
+	</style>
+
+	<body>
+		<h2>手风琴动画</h2>
+		<p>点击标题显示折叠内容</p>
+		<div class="class-item">
+			<div class="class-item-hd">我邀请了其他人关注，他以后消费都跟我有关系吗？</div>
+			<div class="class-item-bd">
+				<p>亲，是的！一次邀请成功后，他以后任何消费的返利收益都归您！我的遵旨是：一次邀请终生收益！</p>
+			</div>
+		</div>
+		<div class="class-item">
+			<div class="class-item-hd">进入公众号主页面后页面一直无限刷新怎么办？</div>
+			<div class="class-item-bd">
+				<p>亲，您的微信昵称含有特殊含义字符，请您修改一下您微信的昵称，然后再打开公众号~给您带来不便敬请谅解！</p>
+			</div>
+		</div>
+		<div class="class-item">
+			<div class="class-item-hd">我订阅过课程，为什么订阅栏目没有内容呢？</div>
+			<div class="class-item-bd">
+				<p>亲，为了提升大家更好的学习环境，最近不定期在进行系统升级，遇到内容不显示的情况，请您点击微信“...”多刷新几次界面即可，感谢您的理解</p>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var acc = document.getElementsByClassName("class-item");
+			for(var i = 0, len = acc.length; i < len; i++) {
+				acc[i].onclick = function() {
+					this.classList.toggle("active");
+					//获取同节点元素
+					//var item_bd = this.nextElementSibling;
+					//获取子节点元素
+					var item_bd = this.children[1];
+					if(item_bd.style.maxHeight) {
+						item_bd.style.maxHeight = '';
+					} else {
+						item_bd.style.maxHeight = item_bd.scrollHeight + "px";
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>
