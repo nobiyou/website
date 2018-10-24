@@ -9,29 +9,51 @@
 	</head>
 	<style type="text/css">
 		.class-item {
-			border-bottom: 1px solid #ddd;
 			background: #fff;
+			font-size: 16px;
+			line-height: 24px;
 		}
 		
-		.class-item:not(:first-child) {
-			margin-top: 5px;
+		@media (min-width: 641px) {
+			.class-item {
+				font-size: 18px;
+				line-height: 27px;
+				letter-spacing: -0.1px;
+			}
+		}
+		
+		.class-item::before,
+		.class-item::after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 1px;
+			background: #E7EBF6;
+		}
+		
+		.class-item+.class-item::before {
+			display: none;
+		}
+		
+		.class-item p {
+			margin-top: 0;
+			line-height: 1.5;
+			color: #5B6A87;
 		}
 		
 		.class-item-hd {
-			background-color: #eee;
-			color: #444;
+			/*background-color: #eee;*/
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 18px 0;
 			cursor: pointer;
-			padding: 18px;
-			border: none;
-			text-align: left;
-			outline: none;
-			padding-left: 25px;
-			transition: 0.4s;
+			color: #1D2B4C;
+			font-weight: 600;
 		}
 		
-		.class-item.active .class-item-hd,
-		.class-item-hd:hover {
-			background-color: #ddd;
+		.class-item-hd span {
+			width: calc(100% - 20px);
 		}
 		
 		.class-item-bd {
@@ -41,18 +63,50 @@
 			transition: max-height 0.2s ease-out;
 		}
 		
-		.class-item-hd:after {
-			content: '\002B';
-			color: #777;
-			font-weight: bold;
-			float: left;
-			margin-left: 5px;
-			position: absolute;
-			left: 15px;
+		.class-item-bd p:last-child {
+			margin-bottom: 24px;
 		}
 		
-		.class-item.active .class-item-hd:after {
-			content: "\2212";
+		.accordion-icon {
+			position: relative;
+			width: 12px;
+			height: 12px;
+		}
+		
+		.accordion-icon::before,
+		.accordion-icon::after {
+			content: '';
+			position: absolute;
+			background-color: #0181F6;
+			transition: -webkit-transform .25s ease-out;
+			transition: transform .25s ease-out;
+			transition: transform .25s ease-out, -webkit-transform .25s ease-out;
+		}
+		
+		.accordion-icon::before {
+			top: 0;
+			left: 50%;
+			width: 2px;
+			height: 100%;
+			margin-left: -1px;
+		}
+		
+		.accordion-icon::after {
+			top: 50%;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			margin-top: -1px;
+		}
+		
+		.class-item.active .accordion-icon::before {
+			-webkit-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+		
+		.class-item.active .accordion-icon::after {
+			-webkit-transform: rotate(180deg);
+			transform: rotate(180deg);
 		}
 	</style>
 
@@ -60,19 +114,22 @@
 		<h2>手风琴动画</h2>
 		<p>点击标题显示折叠内容</p>
 		<div class="class-item">
-			<div class="class-item-hd">我邀请了其他人关注，他以后消费都跟我有关系吗？</div>
+			<div class="class-item-hd">
+				<div class="accordion-icon"></div><span>我邀请了其他人关注，他以后消费都跟我有关系吗？</span></div>
 			<div class="class-item-bd">
 				<p>亲，是的！一次邀请成功后，他以后任何消费的返利收益都归您！我的遵旨是：一次邀请终生收益！</p>
 			</div>
 		</div>
 		<div class="class-item">
-			<div class="class-item-hd">进入公众号主页面后页面一直无限刷新怎么办？</div>
+			<div class="class-item-hd">
+				<div class="accordion-icon"></div><span>进入公众号主页面后页面一直无限刷新怎么办？</span></div>
 			<div class="class-item-bd">
 				<p>亲，您的微信昵称含有特殊含义字符，请您修改一下您微信的昵称，然后再打开公众号~给您带来不便敬请谅解！</p>
 			</div>
 		</div>
 		<div class="class-item">
-			<div class="class-item-hd">我订阅过课程，为什么订阅栏目没有内容呢？</div>
+			<div class="class-item-hd">
+				<div class="accordion-icon"></div><span>我订阅过课程，为什么订阅栏目没有内容呢？</span></div>
 			<div class="class-item-bd">
 				<p>亲，为了提升大家更好的学习环境，最近不定期在进行系统升级，遇到内容不显示的情况，请您点击微信“...”多刷新几次界面即可，感谢您的理解</p>
 			</div>
@@ -82,6 +139,7 @@
 			var acc = document.getElementsByClassName("class-item");
 			for(var i = 0, len = acc.length; i < len; i++) {
 				acc[i].onclick = function() {
+
 					this.classList.toggle("active");
 					//获取同节点元素
 					//var item_bd = this.nextElementSibling;
