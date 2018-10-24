@@ -38,9 +38,12 @@
 				display: block;
 				background-color: #393d41;
 				z-index: 1;
-				padding: 1em;
+				padding: .8em 1em;
+				border: 0;
 				border-radius: 2px;
 				cursor: pointer;
+				color: #ddd;
+				height: auto;
 			}
 			
 			.select .placeholder:hover {
@@ -87,6 +90,29 @@
 				margin: 5px 0 0 0;
 				padding: 0;
 				z-index: 100;
+				animation: mymove .5s;
+				-webkit-animation: mymove .5s;
+			}
+			
+			@keyframes mymove {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			@-webkit-keyframes mymove
+			/*Safari and Chrome*/
+			
+			{
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
 			}
 			
 			.select ul li {
@@ -101,8 +127,48 @@
 				background: #4ebbf0;
 				color: #fff;
 			}
+			
 			.pinput {
-				display: none;
+				height: 40px;
+				border: solid 1px #4ebbf0;
+				border-radius: 2px;
+				width: calc(100% - 28px);
+				background: #fff;
+				color: #333;
+				padding: 0 14px;
+				font-size: 14px;
+				cursor: pointer;
+			}
+			
+			.select::before,
+			.select::after {
+				content: "";
+				position: absolute;
+				pointer-events: none;
+			}
+			
+			.select::before {
+				top: 1px;
+				bottom: 1px;
+				right: 33px;
+				border-left: solid 1px #4ebbf0;
+			}
+			
+			.select::after {
+				border-top: solid 6px #4ebbf0;
+				border-left: solid 7px transparent;
+				border-right: solid 7px transparent;
+				top: 20px;
+				right: 10px;
+			}
+			
+			.select.is-open:after {
+				border-bottom: solid 6px #4ebbf0;
+				border-left: solid 7px transparent;
+				border-right: solid 7px transparent;
+				border-top: 0;
+				top: 16px;
+				right: 10px;
 			}
 		</style>
 	</head>
@@ -111,7 +177,7 @@
 		<h1>用CSS和jQuery制作简单的下拉input框</h1>
 
 		<div class="select">
-			<span class="placeholder">请选择</span>
+			<span class="placeholder pinput">请选择</span>
 			<ul>
 				<li>百度</li>
 				<li>谷歌</li>
@@ -122,8 +188,7 @@
 
 		<br>
 		<div class="select select--white">
-			<span class="placeholder">dowebok</span>
-			<input class="pinput" value="dowebok" type="text"/>
+			<input class="pinput" value="dowebok" type="text" />
 			<ul>
 				<li>代码</li>
 				<li>素材</li>
@@ -134,7 +199,7 @@
 
 		<script src="http://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
 		<script>
-			$('.select').on('click', '.placeholder', function(e) {
+			$('.select').on('click', '.pinput', function(e) {
 				//获取上层元素
 				var parent = $(this).closest('.select');
 				//判断值是否为假
@@ -160,3 +225,6 @@
 				$('.select.is-open').removeClass('is-open');
 			});
 		</script>
+	</body>
+
+</html>
