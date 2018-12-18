@@ -328,10 +328,30 @@ window.onload = function() {
 	var timeout = null; //onresize触发次数过多，设置定时器
 	window.onresize = function() {
 		timeout = setTimeout(function() {
+			//重新加载获取高度
+			boxheight(); //执行函数
+			function boxheight() { //函数：获取尺寸
+				//获取浏览器窗口高度
+				var winHeight = 0;
+				var topHeight = 88;
+				if (window.innerWidth <= 1155)
+					winHeight = 353;
+				else if (window.innerWidth <= 1335)
+					winHeight = 447;
+				else if (window.innerWidth <= 1550)
+					winHeight = 560;
+				else if (window.innerWidth <= 1765)
+					winHeight = 673;
+				else if (window.innerWidth > 1766)
+					winHeight = 784;
+				document.getElementById("mainBox").style.height = winHeight - topHeight + "px";
+				document.getElementById("iqp-player-pc").style.height = winHeight + "px";
+			}
+			//重新加载滚动条
 			var box = document.getElementById("divscrollDiv");
 			box.parentNode.removeChild(box);
 			new addScroll('mainBox', 'content', 'scrollDiv');
-
+			
 		}, 10); //页面大小变化，重新加载页面以刷新
 	}
 
