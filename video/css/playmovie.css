@@ -747,9 +747,8 @@ body {
 
 .iqp-player-pc {
 	height: var(--videoheight);
-	
+	background: #eaf3fc;
 }
-
 
 .qy-player-side-loading {
 	position: absolute;

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<title>爱奇艺登录注册-爱奇艺</title>
+		<meta name="description" lang="zh-CN" content="爱奇艺用户登录注册页面，让您简单轻松地完成账号登录、账号注册，快速体验爱奇艺高品质的产品与服务。" />
+		<link rel="shortcut icon" href="${metaIcon_3872}" type="image/icon" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="${apppleIcon1_3872}">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="${apppleIcon2_3872}">
+		<link href="css/login.css" rel="stylesheet" type="text/css" />
+
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body class="embed-container">
+		<div class="  " id="data-qipalogin-login">
+			<div class="login-title-con">
+				<div class="login-title-subcon">
+					<div class="qiyiLogo">
+						<a href="//www.iqiyi.com/" class="qiyiLogo-link"></a>
+					</div>
+				</div>
+			</div>
+			<div class="login-t-con" >
+				<div class="login-t-subcon">
+					<div class="login-frame " >
+						<div class="login-frame-top">
+							<div class="login-frame-ti">
+								<h2 class="login-title">登录</h2>
+								<div class="info-container info-container-top" >
+									<!-- 鼠标点击输入，添加类accountIn -->
+
+									<p class="errorInfo vh" >
+										<span>手机号格式错误，请重新输入</span>
+									</p>
+									<!-- 去掉vh类，显示 -->
+									<div class="tip-container tip-account-container" >
+										<p class="tip-info" >请输入手机号或邮箱</p>
+										<input type="text" class="txt-info txt-account"  />
+									</div>
+									<a href="javascript:;" class="re-register dn"  >去注册</a>
+								</div>
+								<div class="info-container">
+									<p class="errorInfo vh" >
+										<span>密码错误，请重新输入</span>
+									</p>
+									<div class="tip-container  tip-pwd-container" >
+										<p class="tip-info" >请输入密码</p>
+										<input type="password" class="txt-info txt-password" maxlength="20" id="password" />
+										</span>
+									</div>
+									<a href="javascript:;" class="eye-close" id="showText" onclick="hideShowPsw()"></a>
+									<!-- eye-close为闭眼状态，eye-open为睁眼状态 -->
+								</div>
+								
+								
+								<a href="javascript:;" class="btn-green btn-login " >登录</a>
+
+							</div>
+						</div>
+
+						<div class="login-frame-bottom" >
+							<p class="login-frame-ln">
+								<a href="javascript:;" class="fl" id="data-regist">注册</a>
+
+								<!--span class="fr">
+								<a href="javascript:;" id="cmm_2scan">手机扫码登录</a>
+
+								</span-->
+							</p>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="dn" id="data-qipalogin-reg">
+			<!-- 开始 -->
+			<div id="one" class="">
+				<div class="register-title-con">
+					<div class="register-title-subcon">
+						<a href="" class="fr account-login" id="data-passLogin">账号登录</a>
+						<div class="qiyiLogo">
+							<a href="//www.iqiyi.com/" class="qiyiLogo-link"></a>
+						</div>
+						<div class="regDot">
+							<h2 class="regDot-tit">免费注册</h2>
+						</div>
+					</div>
+				</div>
+				<div class="login-step-con">
+					<div class="stepNav">
+						<div class="stepNavInner">
+							<div class="stepNavInnerLt lt1">
+								<i class="step-num-i">1.</i>
+								<span class="step-txt-i">验证手机号</span>
+							</div>
+							<div class="stepNavInnerCt ct1">
+								<i class="step-num-i">2.</i>
+								<span class="step-txt-i">设置密码</span>
+							</div>
+						</div>
+					</div>
+					<div class="login-frame login-frame-st1 "  >
+						<div class="login-frame-top">
+							<div class="login-frame-ti">
+								<h2 class="login-title">验证手机号</h2>
+								<p class="sub-title">注册过程中会用到短信，请准备好您的手机</p>
+								<div class="info-container" >
+									<!-- 鼠标点击输入，添加类accountIn -->
+									
+									<p class="errorInfo vh" >
+										<span>手机号格式错误，请重新输入</span>
+									</p>
+									<div class="tip-container tip-account-container" >
+										<p class="tip-info" >请输入手机号</p>
+										<input type="text" class="txt-info txt-account"  />
+									</div>
+								</div>
+								<div class="proto-log"><i class="proto-check-icon selected" ></i>同意
+									<a href="//www.iqiyi.com/user/register/protocol.html " >《用户协议》</a>
+									<a href="//www.iqiyi.com/common/secret.html" target="_blank">《隐私政策》</a>
+								</div>
+								<a href="javascript:;" class="btn-green btn-login btn-next" >注册</a>
+							</div>
+						</div>
+					</div>
+					<div class="login-frame login-frame-st1  dn " >
+						<div class="login-frame-top">
+							<div class="login-frame-ti">
+								<h2 class="login-title">验证手机号</h2>
+								<div class="modify-info-councon">
+									<div class="modify-info-co modify-info-country">
+										<span class="btn-modify-info fr"  >修改</span>
+										<span class="modify-country" ></span>
+										<span class="modify-phonenum fs16" >13919309999</span>
+									</div>
+									<div class="info-container info-verify-container" >
+										<div class="tip-container">
+											<p class="tip-info">请输入收到的验证码</p>
+											<input type="text" class="txt-info txt-account" value="" maxlength="6" />
+											<div class="verify-tip-info" >
+												验证码已发送，接受约需<span ></span>秒
+											</div>
+											<div class="verify-tip-info dn" >
+												没收到短信？点击
+												<a href="javascript:;" class="btn-resend"  >重新发送</a>
+											</div>
+											<span class="errorInfo vh" >
+                                    <span>验证码错误</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<a href="javascript:;" class="btn-green btn-login btn-next-verify " >下一步</a>
+							</div>
+						</div>
+
+					</div>
+					
+					<div class="login-frame login-frame-st1 dn" >
+						<div class="login-frame-top">
+							<div class="login-frame-ti">
+								<h2 class="login-title">注册</h2>
+								<div id="regSlidePiccode">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="login-frame login-frame-st1 dn" >
+					</div>
+				</div>
+			</div>
+			<!-- 结束 -->
+			<!-- 开始 -->
+			<div class="  " id="two">
+				<div class="register-title-con">
+					<div class="register-title-subcon">
+						<div class="qiyiLogo">
+							<a href="//www.iqiyi.com/" class="qiyiLogo-link"></a>
+						</div>
+						<div class="regDot">
+							<h2 class="regDot-tit">免费注册</h2>
+						</div>
+					</div>
+				</div>
+				<div class="login-step-con">
+					<div class="stepNav">
+						<div class="stepNavInner">
+							<div class="stepNavInnerLt lt2">
+								<i class="step-num-i">1.</i>
+								<span class="step-txt-i">验证手机号</span>
+							</div>
+							<div class="stepNavInnerCt ct2">
+								<i class="step-num-i">2.</i>
+								<span class="step-txt-i">设置密码</span>
+							</div>
+						</div>
+					</div>
+					<div class="login-frame  login-frame-st1" >
+						<div class="dn"  ></div>
+						<div class="login-frame-top">
+							<div class="login-frame-ti login-frame-pas">
+								<h2 class="login-title">设置密码</h2>
+
+								<div class="info-container" >
+									<p class="errorInfo vh" >
+										<span>8-20位字母、数字或字符,至少包含两种</span>
+									</p>
+									<div class="tip-container tip-pwd-container">
+										<p class="tip-info" >8-20位字母、数字或字符,至少包含两种</p>
+										<input type="password" class="txt-info txt-password" id="regpassword" maxlength="20" />
+									</div>
+									<a href="javascript:;" class="eye-close" id="regshowText"></a>
+								</div>
+								<div class="info-container" >
+									<p class="errorInfo vh" >
+										<span>两次密码不相同</span>
+									</p>
+									<div class="tip-container tip-pwd-container">
+										<p class="tip-info" >请再输入一遍</p>
+										<input type="password" class="txt-info txt-password"  maxlength="20" />
+									</div>
+								</div>
+								<a href="javascript:;" class="btn-green btn-login btn-next" >完成注册</a>
+							</div>
+						</div>
+					</div>
+					<div class="login-frame login-frame-st dn" >
+					</div>
+				</div>
+			</div>
+			<!-- 结束 -->
+			<!-- 恭喜您注册成功开始 -->
+			<div class="" id="three">
+				<div class="register-title-con">
+					<div class="register-title-subcon">
+						<a href="javascript:;" class="fr account-login dn">账号登录</a>
+						<div class="qiyiLogo">
+							<a href="//www.iqiyi.com/" class="qiyiLogo-link"></a>
+						</div>
+						<div class="regDot">
+							<h2 class="regDot-tit">免费注册</h2>
+						</div>
+					</div>
+				</div>
+				<div class="login-step-con login-step-conin">
+					<div class="login-info-frame login-info-fras">
+						<div class="login-frame-ti">
+							<h2 class="login-title">恭喜您注册成功</h2>
+							<p class="sub-title sub-title-ves">下面是您将在爱奇艺使用的头像和昵称</p>
+							<div class="register-sus-container">
+								<div class="register-name-con">
+									<img src="img/a_100056295_m_601_m21_260_360.jpg" class="register-name" >
+								</div>
+								<p class="register-name-ed">
+									<span >kekkw</span>
+								</p>
+							</div>
+							<a href="javascript:;" class="btn-green btn-login btn-regi-submit" >完成</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			//			function registUser(ids){
+			//				if(ids=='reg'){
+			//					document.getElementById('bodyUser').setAttribute("class", "reg-container");
+			//				}else{
+			//					document.getElementById('bodyUser').setAttribute("class", "embed-container");
+			//				}
+			//				document.getElementById('data-qipalogin-login').setAttribute("class", "dn");
+			//				document.getElementById('data-qipalogin-reg').setAttribute("class", "dn");
+			//				document.getElementById('data-qipalogin-'+ids).setAttribute("class", "");
+			//			}
+
+			function $(id) {
+				return(document.getElementById(id));
+			}
+
+			//登录框点击
+			var btnArray = document.getElementsByClassName('info-container');
+			for(var i = 0; i < btnArray.length; i++) {
+				btnArray[i].onclick = function() {
+					//alert(tip_info);
+					for(var j = 0; j < btnArray.length; j++) {
+						//alert(j);
+						if(btnArray[j] == this) {
+							this.classList.add("accountIn");
+							//alert(tip_info);
+							this.children[1].children[0].classList.add("tip-info-active");
+						} else {
+							btnArray[j].classList.remove("accountIn");
+							if(btnArray[j] == 'accountIn') {
+								btnArray[j].classList.add("accountout");
+							}
+							this.children[1].children[0].classList.add("tip-info-active");
+
+						}
+					}
+				};
+
+			}
+
+			//显示或隐藏密码
+
+			$("showText").onclick = function () {
+				if($("password").type == "password") {
+					$("password").type = "text";
+					$("showText").className = "eye-close eye-open";
+				} else {
+					$("password").type = "password";
+					$("showText").className = "eye-close";
+				}
+			}
+			$("regshowText").onclick = function () {
+				if($("regpassword").type == "password") {
+					$("regpassword").type = "text";
+					$("regshowText").className = "eye-close eye-open";
+				} else {
+					$("regpassword").type = "password";
+					$("regshowText").className = "eye-close";
+				}
+			}
+
+			//登录页和注册页切换
+			$("data-regist").onclick = function() {
+				$("data-qipalogin-reg").classList.remove("dn");
+				$("data-qipalogin-login").classList.add("dn");
+				document.getElementsByTagName("body")[0].className = "reg-container";
+			}
+			$("data-passLogin").onclick = function() {
+				$("data-qipalogin-reg").className = "dn";
+				$("data-qipalogin-login").className = "";
+				document.getElementsByTagName("body")[0].className = "embed-container";
+			}
+		</script>
+	</body>
+
+</html>
