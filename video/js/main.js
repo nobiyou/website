@@ -36,7 +36,7 @@ window.onload = function() {
 		else if (window.innerWidth > 1766)
 			winHeight = 784;
 		document.getElementById("mainBox").style.height = winHeight - topHeight + "px";
-		document.getElementById("iqp-player-pc").style.height = winHeight + "px";
+		document.getElementById("video").style.height = winHeight + "px";
 	}
 	window.onresize = boxheight; //窗口或框架被调整大小时执行
 
@@ -345,7 +345,7 @@ window.onload = function() {
 				else if (window.innerWidth > 1766)
 					winHeight = 784;
 				document.getElementById("mainBox").style.height = winHeight - topHeight + "px";
-				document.getElementById("iqp-player-pc").style.height = winHeight + "px";
+				document.getElementById("video").style.height = winHeight + "px";
 			}
 			//重新加载滚动条
 			var box = document.getElementById("divscrollDiv");
