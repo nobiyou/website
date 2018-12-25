@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>dog</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				border: none;
+				padding: 0;
+				font-family: Consolas, Monaco, monospace, Microsoft YaHei;
+			}
+
+			body,
+			html {
+				height: 100%;
+			}
+
+
+
+			.success {
+				color: #51a351;
+			}
+
+			.warning {
+				color: #666;
+			}
+
+			.danger {
+				color: #bd362f;
+			}
+
+			.font-left {
+				text-align: left;
+			}
+
+			.dogcontent:after {
+				content: ".";
+				clear: both;
+				display: block;
+				height: 0;
+				visibility: hidden;
+			}
+
+			.content-box {
+				max-width: 700px;
+				margin: 0 auto;
+				background: #DDDDDD;
+				min-height: 100%;
+				/* background: url(1.jpg); */
+				background-size: 100%;
+				background-position-y: -42px;
+			}
+
+			.dog-bar {
+				background: -moz-linear-gradient(45deg, #6a2dd3, #f72e38);
+				background: linear-gradient(45deg, #6a2dd3, #f72e38);
+				text-align: center;
+				color: #fff;
+				border-radius: 0 0 10px 10px;
+				box-shadow: 0 0 1.25rem rgba(108, 118, 134, .8);
+			}
+
+			.dog-title {
+				text-indent: -9999px;
+				height: 0;
+			}
+
+			.dog-search-box {
+				padding: 10px 20px;
+				position: relative;
+			}
+
+			.dog-search {
+				border: 1px solid #eeeeee;
+				border-radius: 20px;
+				height: 38px;
+				width: 100%;
+				padding: 5px 39px 5px 15px;
+			}
+
+			.dog-search-box .search-btn {
+				position: absolute;
+				border: 0;
+				background: transparent;
+				right: 30px;
+				top: 15px;
+				height: 26px;
+				width: 26px;
+				background-image: url(search.png);
+				background-size: 26px;
+			}
+
+			.dogsum {
+				padding: 2px 15px 45px;
+			}
+
+			.dogpoint span {
+				font-size: 2.8rem;
+				font-weight: 100;
+				display: block;
+			}
+
+			.dogpoint {
+				font-size: .9rem;
+				font-weight: normal;
+
+				margin-top: 8px;
+			}
+
+			.doglist {
+				margin-top: -25px;
+				padding-bottom: 10px;
+			}
+
+			.dogMerchant {
+				margin: 0 26px;
+				background: #FFF;
+				border-radius: 26px;
+				height: 42px;
+				padding: 5px 12px;
+			}
+
+			.dogMerchant img {
+				width: 30px;
+			}
+
+			.chanttitle,
+			.chantnum {
+				display: inline-block;
+				padding: 5px 0;
+			}
+
+			.chanttitle .title {
+				font-size: .9rem;
+			}
+
+			.chanttitle span {
+				font-size: .8rem;
+				color: #CCCCCC;
+
+			}
+
+			.chantnum {
+				float: right;
+				line-height: 32px;
+			}
+
+			.chantnum span {
+				font-size: 1.4rem;
+				color: #f72e38;
+			}
+
+			.dogul {
+				margin: 10px 15px;
+				list-style: none;
+			}
+
+			.dogul .dogli {
+				background: #fff;
+				border-radius: 10px;
+				padding: 15px;
+				margin-bottom: 10px;
+				background: -moz-linear-gradient(45deg, #eee, #fff);
+				background: linear-gradient(45deg, #eee, #fff);
+				box-shadow: 0 0 1.25rem rgba(108, 118, 134, .1);
+			}
+
+			.doguser img {
+				width: 20px;
+				position: absolute;
+				left: 0;
+				top: 2px
+			}
+
+			.doguser {
+				position: relative;
+				padding-left: 25px;
+				color: #333;
+				line-height: 25px;
+			}
+
+			.doguser .usertitle {
+				display: inline-block;
+				font-size: 1.1rem;
+			}
+
+			.doguser .usertel {
+				font-size: .8rem;
+				text-align: right;
+				float: right;
+				font-weight: normal;
+				color: #aaa;
+			}
+
+			.dogcoding {
+				font-size: 2.1rem;
+				display: inline-block;
+				padding: 10px 0;
+				font-family: Tahoma, Candara;
+				font-weight: 500;
+			}
+
+			.dogcoding span {
+				color: #333;
+				font-family: Palatino, Times New Roman;
+				font-weight: 400;
+			}
+
+			.dogstatus {
+				font-size: .8rem;
+				float: right;
+				display: inline-block;
+				line-height: 62px;
+			}
+
+			.dogtime {
+				position: relative;
+				color: #666;
+			}
+
+			.dogtime .timetitle {
+				font-size: .8rem;
+			}
+
+			.progress {
+				height: 15px;
+				margin: 10px 0;
+				background-color: #ccc;
+				border-radius: 7px;
+				position: relative;
+				/* -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
+				box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2); */
+			}
+
+			.progress-bar {
+				float: left;
+				width: 0;
+				height: 15px;
+				margin-top: -1px;
+				border-radius: 8px;
+				text-align: center;
+				background: -moz-linear-gradient(45deg, #6a2dd3, #f72e38);
+				background: linear-gradient(45deg, #6a2dd3, #f72e38);
+				/* -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+				box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15); */
+				-webkit-transition: width .3s ease;
+				-o-transition: width .3s ease;
+				transition: width .3s ease;
+				-webkit-animation: progressbar 4s;
+				animation: progressbar 4s;
+			}
+
+			@-webkit-keyframes progressbar {
+				30% {
+					width: 15px
+				}
+
+			}
+
+			/* Standard syntax */
+			@keyframes progressbar {
+				30% {
+					width: 15px
+				}
+			}
+
+			.warning .progress-bar,
+			.danger .progress-bar {
+				background: #a9a9a9;
+			}
+
+			.progress-bar span {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				font-size: .8rem;
+				color: #fff;
+			}
+
+			.timelimit {
+				font-size: .8rem;
+				position: relative;
+				height: 1rem;
+			}
+
+			.timelimit:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 50%;
+				height: 1px;
+				width: 100%;
+				background: #999;
+				z-index: 1;
+			}
+
+			.timelimit span {
+				position: absolute;
+				padding: 0 5px;
+				border-radius: 10px;
+				background: #fff;
+				z-index: 2;
+			}
+
+			.timelimit .starttime {
+				left: 0;
+			}
+
+			.timelimit .endtime {
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content-box">
+			<header class="dog-bar">
+				<h1 class="dog-title">标题</h1>
+				<div class="dog-search-box">
+					<input type="search" class="dog-search" placeholder="">
+					<button type="button" class="search-btn"></button>
+				</div>
+				<div class="dogsum">
+					<h2 class="dogpoint "><span class="counter-value">1450</span>个授权点</h2>
+				</div>
+			</header>
+			<div class="doglist">
+				<div class="dogMerchant">
+					<img src="shang.png">
+					<div class="chanttitle">
+						<h3 class="title">已授权商户</h3>
+						<span>2018年1月——12月</span>
+					</div>
+					<div class="chantnum"><span class="counter-value">251</span>家</div>
+				</div>
+				<ul class="dogul">
+					<li class="dogli success">
+						<div class="doguser">
+							<img src="../payer/img/play.png">
+							<h4 class="usertitle">李小龙</h4>
+							<span class="usertel">13946521547</span>
+						</div>
+						<h4 class="dogcoding "><span>No.</span>52461524</h4>
+						<p class="dogstatus">-正常使用-</p>
+						<div class="dogcontent font-left">
+
+							<div class="dogtime">
+								<span class="timetitle">使用期限</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										<span>还剩55天</span>
+									</div>
+								</div>
+								<div class="timelimit">
+									<span class="starttime">2018年6月5日</span>
+									<span class="endtime">2019年6月9日</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="dogli warning">
+						<div class="doguser">
+							<img src="../payer/img/play.png">
+							<h4 class="usertitle">王琦</h4>
+							<span class="usertel">13946521547</span>
+						</div>
+						<h4 class="dogcoding "><span>No.</span>52461524</h4>
+						<p class="dogstatus">-已过期-</p>
+						<div class="dogcontent font-left">
+
+							<div class="dogtime">
+								<span class="timetitle">使用期限</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+										<span>还剩0天</span>
+									</div>
+								</div>
+								<div class="timelimit">
+									<span class="starttime">2018年6月5日</span>
+									<span class="endtime">2019年6月9日</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="dogli danger">
+						<div class="doguser">
+							<img src="../payer/img/play.png">
+							<h4 class="usertitle">刘美玲</h4>
+							<span class="usertel">13946521547</span>
+						</div>
+						<h4 class="dogcoding "><span>No.</span>52461524</h4>
+						<p class="dogstatus">-已禁用-</p>
+						<div class="dogcontent font-left">
+
+							<div class="dogtime">
+								<span class="timetitle">使用期限</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										<span>还剩55天</span>
+									</div>
+								</div>
+								<div class="timelimit">
+									<span class="starttime">2018年6月5日</span>
+									<span class="endtime">2019年6月9日</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="dogli success">
+						<div class="doguser">
+							<img src="../payer/img/play.png">
+							<h4 class="usertitle">呼伦贝尔</h4>
+							<span class="usertel">13946521547</span>
+						</div>
+						<h4 class="dogcoding "><span>No.</span>52461524</h4>
+						<p class="dogstatus">-正常使用-</p>
+						<div class="dogcontent font-left">
+
+							<div class="dogtime">
+								<span class="timetitle">使用期限</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										<span>还剩55天</span>
+									</div>
+								</div>
+								<div class="timelimit">
+									<span class="starttime">2018年6月5日</span>
+									<span class="endtime">2019年6月9日</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="dogli success">
+						<div class="doguser">
+							<img src="../payer/img/play.png">
+							<h4 class="usertitle">买买提</h4>
+							<span class="usertel">13946521547</span>
+						</div>
+						<h4 class="dogcoding "><span>No.</span>52461524</h4>
+						<p class="dogstatus">-正常使用-</p>
+						<div class="dogcontent font-left">
+
+							<div class="dogtime">
+								<span class="timetitle">使用期限</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+										<span>还剩255天</span>
+									</div>
+								</div>
+								<div class="timelimit">
+									<span class="starttime">2018年6月5日</span>
+									<span class="endtime">2019年6月9日</span>
+								</div>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.counter-value').each(function() {
+					$(this).prop('Counter', 0).animate({
+						Counter: $(this).text()
+					}, {
+						duration: 3500,
+						easing: 'swing',
+						step: function(now) {
+							$(this).text(Math.ceil(now));
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
