@@ -10,7 +10,7 @@
 				margin: 0;
 				border: none;
 				padding: 0;
-				font-family: Consolas, Monaco, monospace, Microsoft YaHei;
+				font-family: Arial, Helvetica, sans-serif, Microsoft YaHei;
 			}
 
 			body,
@@ -21,15 +21,18 @@
 
 
 			.success {
-				color: #51a351;
+				/* color: #51a351; */
+				background: #51a351;
 			}
 
 			.warning {
-				color: #666;
+				/* color: #666; */
+				background: #666;
 			}
 
 			.danger {
-				color: #bd362f;
+				/* color: #bd362f; */
+				background: #bd362f;
 			}
 
 			.font-left {
@@ -99,7 +102,7 @@
 
 			.dogpoint span {
 				font-size: 2.8rem;
-				font-weight: 100;
+				font-weight: 600;
 				display: block;
 			}
 
@@ -163,6 +166,7 @@
 				border-radius: 10px;
 				padding: 15px;
 				margin-bottom: 10px;
+				position: relative;
 				background: -moz-linear-gradient(45deg, #eee, #fff);
 				background: linear-gradient(45deg, #eee, #fff);
 				box-shadow: 0 0 1.25rem rgba(108, 118, 134, .1);
@@ -188,7 +192,7 @@
 			}
 
 			.doguser .usertel {
-				font-size: .8rem;
+				font-size: .75rem;
 				text-align: right;
 				float: right;
 				font-weight: normal;
@@ -201,6 +205,7 @@
 				padding: 10px 0;
 				font-family: Tahoma, Candara;
 				font-weight: 500;
+				color: #666;
 			}
 
 			.dogcoding span {
@@ -210,10 +215,56 @@
 			}
 
 			.dogstatus {
-				font-size: .8rem;
+				font-size: .75rem;
 				float: right;
 				display: inline-block;
-				line-height: 62px;
+				line-height: .9rem;
+				padding: 3px 10px 3px 5px;
+				color: #333;
+				position: absolute;
+				right: 15px;
+				top: 33.33%;
+				border: 1px transparent solid;
+				border-radius: 25px;
+				box-sizing: border-box;
+				background-clip: padding-box, border-box;
+				background-origin: padding-box, border-box;
+
+			}
+
+			.dogstatus i {
+				width: 10px;
+				height: 10px;
+				border-radius: 6px;
+				display: inline-block;
+				margin: 0 5px;
+			}
+
+			.success .dogstatus {
+				background-image: linear-gradient(45deg, #fff, #fff), linear-gradient(45deg, #51a351, #ccc);
+			}
+
+			.success .dogstatus i {
+				background: #51a351;
+				box-shadow: 1px 1px 5px rgba(81, 163, 81, .8);
+			}
+
+			.warning .dogstatus {
+				background-image: linear-gradient(45deg, #fff, #fff), linear-gradient(45deg, #666, #ccc);
+			}
+
+			.warning .dogstatus i {
+				background: #666;
+				box-shadow: 1px 1px 5px rgba(102, 102, 102, .8);
+			}
+
+			.danger .dogstatus {
+				background-image: linear-gradient(45deg, #fff, #fff), linear-gradient(45deg, #bd362f, #ccc);
+			}
+
+			.danger .dogstatus i {
+				background: #bd362f;
+				box-shadow: 1px 1px 5px rgba(189, 54, 47, .8);
 			}
 
 			.dogtime {
@@ -222,7 +273,7 @@
 			}
 
 			.dogtime .timetitle {
-				font-size: .8rem;
+				font-size: .9rem;
 			}
 
 			.progress {
@@ -277,12 +328,12 @@
 				top: 0;
 				left: 0;
 				right: 0;
-				font-size: .8rem;
+				font-size: .75rem;
 				color: #fff;
 			}
 
 			.timelimit {
-				font-size: .8rem;
+				font-size: .75rem;
 				position: relative;
 				height: 1rem;
 			}
@@ -294,15 +345,18 @@
 				top: 50%;
 				height: 1px;
 				width: 100%;
-				background: #999;
+				background: #e1e1e1;
 				z-index: 1;
 			}
 
 			.timelimit span {
 				position: absolute;
 				padding: 0 5px;
+				height: 1rem;
+				line-height: 1.1rem;
 				border-radius: 10px;
-				background: #fff;
+				background: #e1e1e1;
+				color: #a1a1a1;
 				z-index: 2;
 			}
 
@@ -344,7 +398,7 @@
 							<span class="usertel">13946521547</span>
 						</div>
 						<h4 class="dogcoding "><span>No.</span>52461524</h4>
-						<p class="dogstatus">-正常使用-</p>
+						<p class="dogstatus"><i></i>正常使用</p>
 						<div class="dogcontent font-left">
 
 							<div class="dogtime">
@@ -368,7 +422,7 @@
 							<span class="usertel">13946521547</span>
 						</div>
 						<h4 class="dogcoding "><span>No.</span>52461524</h4>
-						<p class="dogstatus">-已过期-</p>
+						<p class="dogstatus"><i></i>已过期</p>
 						<div class="dogcontent font-left">
 
 							<div class="dogtime">
@@ -391,8 +445,8 @@
 							<h4 class="usertitle">刘美玲</h4>
 							<span class="usertel">13946521547</span>
 						</div>
-						<h4 class="dogcoding "><span>No.</span>52461524</h4>
-						<p class="dogstatus">-已禁用-</p>
+						<h4 class="dogcoding "><span>No.</span>1234567890</h4>
+						<p class="dogstatus"><i></i>已禁用</p>
 						<div class="dogcontent font-left">
 
 							<div class="dogtime">
@@ -416,7 +470,7 @@
 							<span class="usertel">13946521547</span>
 						</div>
 						<h4 class="dogcoding "><span>No.</span>52461524</h4>
-						<p class="dogstatus">-正常使用-</p>
+						<p class="dogstatus"><i></i>正常使用</p>
 						<div class="dogcontent font-left">
 
 							<div class="dogtime">
@@ -440,7 +494,7 @@
 							<span class="usertel">13946521547</span>
 						</div>
 						<h4 class="dogcoding "><span>No.</span>52461524</h4>
-						<p class="dogstatus">-正常使用-</p>
+						<p class="dogstatus"><i></i>正常使用</p>
 						<div class="dogcontent font-left">
 
 							<div class="dogtime">
