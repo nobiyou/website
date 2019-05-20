@@ -1,43 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+		<title>网站维护中</title>
+		<link href="./favicon.png" rel="Shortcut Icon" type="image/x-icon">
+		<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
 
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
+	</head>
+	<body>
+		<div class="preserve" id="bg">
+			<div class="logo"><a href=""><img src="./logo.png"></a></div>
+			<h2>国外VPS挂了，联系不上商家…<br>回来后改版</h2>
+			<p class="icp"><span class="line">Copyright 2007-<script>
+						var year="";
+						mydate=new Date();
+						myyear=mydate.getYear();
+						year=(myyear > 200) ? myyear : 1900 + myyear;
+						document.write(year); 
+						</script>
+					© Dongzuren.com All Rights Reserved. </span></p>
+		</div>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-family: "SourceHanSansCN", "Helvetica Neue", "PingFang SC", "Microsoft Yahei", "Wenquanyi Micro Hei", sans-serif;
+				list-style: none;
+				text-decoration: none;
+				font-style: normal;
+				font-weight: 300;
+			}
 
-  <title>维护页面</title>
-  <meta name="description" content="维护页面">
-  <meta name="author" content="维护页面">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link type="image/png" href="favicon.png" rel="shortcut icon" />
-  <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+			img {
+				vertical-align: middle;
+				border: 0;
+				width: 100%;
+			}
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+			.preserve {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #333;
+				background-size: cover;
+				background-position: center;
+			}
 
-<body>
-  <div class="row">
-    <div class="col col-lg-8 col-lg-offset-2">
-      <h1>说明</h1>
-      <p>这是一个维护页面，系统正常维护请稍后访问！</p>
-      <p>最新消息可以关注官方微博。</p>
-      <ul>
-        <li>微博：<a target="_blank" href="https://weibo.com">侗族人</a></li>
-        <li>推特：<a target="_blank" href="https://twitter.com/dongzuren">@dongzuren</a></li>
-        <li>微信公众号：搜索“侗族人”，或者扫描下面的二维码。</li>
-      </ul>
-      <p>二维码生成中.....</p>
-    </div>
-  </div>
+			.preserve .logo {
+				margin: 80px auto 0;
+				width: 165px;
+			}
 
-  <div class="row">
-    <div class="col col-lg-8 col-lg-offset-2">
-      <h2>最近做的项目</h2>
-      <p><a href="/m-yibo">艺博教育的手机端页面</a></p>
-      <p><a href="/html2canvas">html2jpg的一个单页</a></p>
-      <p><a href="/mt">一个管理系统页面</a></p>
-    </div>
-  </div>
-</body>
+			.preserve h2 {
+				font-size: 44px;
+				color: #fff;
+				line-height: 80px;
+				position: absolute;
+				left: 20%;
+				bottom: 200px;
+			}
+
+			.preserve .icp {
+				font-size: 12px;
+				color: #fff;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 40px;
+				text-align: center;
+			}
+
+			.preserve .icp span {
+				font-size: 12px;
+				color: #fff;
+				margin-left: 15px;
+				line-height: 24px;
+			}
+			#bg{
+				background: url('https://area.sinaapp.com/bingImg');	
+			}
+		</style>
+	</body>
 </html>
