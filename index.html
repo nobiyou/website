@@ -1,90 +1,589 @@
 <!DOCTYPE html>
-<html lang="zh">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
-		<title>网站维护中</title>
-		<link href="./favicon.png" rel="Shortcut Icon" type="image/x-icon">
-		<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频号下载助手 - 轻松下载微信视频号内容</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2E7D32;
+            --accent-color: #8BC34A;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: var(--dark-color);
+        }
+        
+        .bg-primary-custom {
+            background-color: var(--primary-color);
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 6rem 0;
+        }
+        
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .feature-card {
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-card {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .cta-section {
+            background-color: var(--accent-color);
+            padding: 5rem 0;
+            color: white;
+        }
+        
+        .footer {
+            padding: 3rem 0;
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .footer a {
+            color: white;
+            opacity: 0.8;
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+        }
+        
+        .social-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+        }
+        
+        .screenshot {
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .screenshot:hover {
+            transform: scale(1.05);
+        }
+        
+        .counter-item {
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .counter-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .counter-text {
+            font-size: 1.2rem;
+        }
+        
+        .pricing-card {
+            border-radius: 10px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid var(--primary-color);
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 3rem 0;
+            }
+            
+            .hero-image {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="text-success">视频号</span>下载助手
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">功能特点</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#screenshots">软件截图</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">常见问题</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#download">立即下载</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-	</head>
-	<body>
-		<div class="preserve" id="bg">
-			<div class="logo"><a href=""><img src="./logo.png"></a></div>
-			<h2>国外VPS挂了，正在积极联系服务商…<br>大家耐心等待</h2>
-			<p class="icp"><span class="line">Copyright 2015-<script>
-						var year="";
-						mydate=new Date();
-						myyear=mydate.getYear();
-						year=(myyear > 200) ? myyear : 1900 + myyear;
-						document.write(year); 
-						</script>
-					© ixiu.one All Rights Reserved. </span></p>
-		</div>
-		<style type="text/css">
-			* {
-				margin: 0;
-				padding: 0;
-				border: 0;
-				font-family: "SourceHanSansCN", "Helvetica Neue", "PingFang SC", "Microsoft Yahei", "Wenquanyi Micro Hei", sans-serif;
-				list-style: none;
-				text-decoration: none;
-				font-style: normal;
-				font-weight: 300;
-			}
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="fw-bold mb-4">微信视频号内容下载神器</h1>
+                    <p class="lead mb-4">自动为视频号详情页添加下载按钮，支持多种分辨率和视频质量，完全无水印，操作简便！</p>
+                    <div class="d-flex gap-3">
+                        <a href="#download" class="btn btn-light btn-lg fw-bold">立即下载</a>
+                        <a href="#features" class="btn btn-outline-light btn-lg">了解更多</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/zhujiemian.png" alt="视频号下载助手界面展示" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
 
-			img {
-				vertical-align: middle;
-				border: 0;
-				width: 100%;
-			}
+    <!-- Features Section -->
+    <section class="py-5" id="features">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">强大功能，简单操作</h2>
+                <p class="lead text-muted">专为微信视频号内容下载设计的便捷工具</p>
+            </div>
 
-			.preserve {
-				position: fixed;
-				top: 0;
-				bottom: 0;
-				right: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: #333;
-				background-size: cover;
-				background-position: center;
-			}
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h4>便捷下载</h4>
+                        <p class="text-muted">在视频详情页自动添加下载按钮，一键点击即可下载视频，无需繁琐操作。</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h4>多种格式</h4>
+                        <p class="text-muted">支持多种分辨率和质量的视频下载，从流畅清晰到高清原画，满足不同需求。</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>缓存提示</h4>
+                        <p class="text-muted">针对长视频提供缓存进度显示功能，让您清楚了解下载准备情况。</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-table"></i>
+                        </div>
+                        <h4>数据导出</h4>
+                        <p class="text-muted">保存下载记录和运营数据为表格，支持导出公众号信息、视频发布IP等数据。</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h4>界面优化</h4>
+                        <p class="text-muted">优化的用户界面设计，简洁直观，提升使用体验，提供清晰的视频缓存进度显示。</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>运营数据</h4>
+                        <p class="text-muted">支持导出点赞、收藏、转发等运营数据，帮助内容创作者分析视频表现。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			.preserve .logo {
-				margin: 80px auto 0;
-				width: 165px;
-			}
+    <!-- Screenshots Section -->
+    <section class="bg-light py-5" id="screenshots">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">软件界面截图</h2>
+                <p class="lead text-muted">简洁直观的用户界面，让您的使用更加轻松</p>
+            </div>
 
-			.preserve h2 {
-				font-size: 44px;
-				color: #fff;
-				line-height: 80px;
-				position: absolute;
-				left: 20%;
-				bottom: 200px;
-			}
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="assets/zhujiemian.png" alt="软件主界面" class="img-fluid screenshot mb-3">
+                    <h5 class="text-center">主界面展示</h5>
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/shipinxiazai.png" alt="下载按钮" class="img-fluid screenshot mb-3">
+                    <h5 class="text-center">下载按钮展示</h5>
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/jindutixing.png" alt="缓存进度" class="img-fluid screenshot mb-3">
+                    <h5 class="text-center">缓存进度提示</h5>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			.preserve .icp {
-				font-size: 12px;
-				color: #fff;
-				position: absolute;
-				left: 0;
-				right: 0;
-				bottom: 40px;
-				text-align: center;
-			}
+    <!-- Counter Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="counter-item">
+                        <div class="counter-number">9种</div>
+                        <div class="counter-text">视频格式选择</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter-item">
+                        <div class="counter-number">1080P</div>
+                        <div class="counter-text">支持最高分辨率</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter-item">
+                        <div class="counter-number">6.23</div>
+                        <div class="counter-text">最新版本号</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter-item">
+                        <div class="counter-number">100%</div>
+                        <div class="counter-text">原画质无水印</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			.preserve .icp span {
-				font-size: 12px;
-				color: #fff;
-				margin-left: 15px;
-				line-height: 24px;
-			}
-			#bg{
-				background: url('https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN');	
-			}
-		</style>
-	</body>
-</html>
+    <!-- Testimonials Section -->
+    <section class="bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">用户评价</h2>
+                <p class="lead text-muted">来看看用户们怎么说</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <img src="https://api.dicebear.com/6.x/avataaars/svg?seed=Felix" alt="用户头像" class="rounded-circle" width="60" height="60" style="background-color: #f8f9fa;">
+                            </div>
+                            <div>
+                                <h5 class="mb-0">张先生</h5>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"这个工具太方便了！在视频号详情页直接添加下载按钮，不需要复制链接，直接点击就能保存，各种分辨率都有，非常实用。"</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <img src="https://api.dicebear.com/6.x/avataaars/svg?seed=Lily" alt="用户头像" class="rounded-circle" width="60" height="60" style="background-color: #f8f9fa;">
+                            </div>
+                            <div>
+                                <h5 class="mb-0">李女士</h5>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"长视频的缓存提示功能特别贴心，让我知道什么时候可以开始下载。导出表格的功能也很适合我分析视频的传播效果。"</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <img src="https://api.dicebear.com/6.x/avataaars/svg?seed=Max" alt="用户头像" class="rounded-circle" width="60" height="60" style="background-color: #f8f9fa;">
+                            </div>
+                            <div>
+                                <h5 class="mb-0">王先生</h5>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"作为内容创作者，这个工具帮我收集了很多参考素材，还能导出运营数据分析受众喜好。不同格式的选择很全面，推荐使用。"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5" id="faq">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">常见问题</h2>
+                <p class="lead text-muted">解答您可能遇到的疑问</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                    如何下载视频号内容？
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    启动软件后，打开微信视频号中的视频详情页，在视频下方操作栏中会自动添加下载按钮，点击即可下载。如果没有看到下载按钮，请检查"更多"选项中是否有"下载视频"。
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                    如何下载长视频？
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    对于较长的视频，需要完整缓存后才能下载。视频加载过程中会显示缓存进度，缓存完成后会有明显提示，此时才能进行下载。建议按顺序缓存，不要跳着点进度条。
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                    支持哪些视频格式和质量？
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    软件支持多种分辨率和质量的视频下载，包括1024x576、1280x720以及原始1920x1080高清格式。每种分辨率还有不同的码率选择，可以根据自己的需求选择合适的格式。
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                    遇到服务启动后视频详情一直在加载怎么办？
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    如果服务启动后视频详情一直在加载，终端无日志，在终端中按一次Ctrl+C即可恢复正常。
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                    如何解决解密失败，停止下载的问题？
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    遇到解密失败，停止下载的情况，请关闭所有视频页面和窗口，然后重新打开尝试下载。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="download">
+        <div class="container py-5">
+            <div class="row align-items-center mb-4">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-3">立即下载，体验视频号下载神器</h2>
+                    <p class="lead mb-0">一键添加下载按钮，轻松保存微信视频号内容，多种格式选择！</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="https://wwyp.lanzoul.com/b00zxv524h" class="btn btn-light btn-lg fw-bold">免费下载</a>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card bg-transparent border-light">
+                        <div class="card-body text-white">
+                            <h5 class="mb-3"><i class="fas fa-download me-2"></i> 下载地址</h5>
+                            <p class="mb-2"><strong>蓝奏云网盘：</strong><a href="https://wwyp.lanzoul.com/b00zxv524h" class="text-white">https://wwyp.lanzoul.com/b00zxv524h</a></p>
+                            <p class="mb-3"><strong>提取密码：</strong><span class="badge bg-light text-success">fton</span></p>
+                            
+                            <h5 class="mb-3 mt-4"><i class="fab fa-github me-2"></i> 开源地址</h5>
+                            <p class="mb-0"><strong>GitHub：</strong><a href="https://github.com/nobiyou/wx_channel" class="text-white">https://github.com/nobiyou/wx_channel</a></p>
+                            <p class="mb-0 mt-2">欢迎Star和贡献代码，一起让这个工具更加完善！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5 class="mb-4">关于我们</h5>
+                    <p>视频号下载助手是一款用于下载微信视频号内容的工具，基于ltaoo的开源项目进行功能扩展和界面优化。致力于提供最简单、高效的视频号内容保存解决方案。</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="mb-4">联系我们</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> ltxxgs#gmail.com</li>
+                        <li class="mb-2"><i class="fab fa-github me-2"></i> <a href="https://github.com/nobiyou/wx_channel" class="text-decoration-none">github.com/nobiyou/wx_channel</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="mb-4">赞赏支持</h5>
+                    <p>如果本项目对您有所帮助，欢迎请作者喝杯咖啡 ☕️</p>
+                    <img src="assets/zanshang.png" alt="赞赏码" class="img-fluid" style="max-width: 150px;">
+                </div>
+            </div>
+
+            <hr class="my-4 bg-white opacity-25">
+
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2025 视频号下载助手 | <a href="https://github.com/nobiyou/wx_channel" class="text-decoration-none">开源项目</a></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://github.com/nobiyou/wx_channel/issues" class="text-decoration-none">问题反馈</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
