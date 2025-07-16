@@ -15,6 +15,16 @@
     <script>
         tailwind.config = {
             theme: {
+                container: {
+                    center: true, // 自动居中 
+                    padding: '2rem', // 默认水平间距 
+                    screens: {
+                        sm: '640px',   // 小屏断点 
+                        md: '768px',   // 中屏断点 
+                        lg: '1024px',  // 大屏断点 
+                        xl: '1280px',  // 超大屏断点 
+                    }
+                },
                 extend: {
                     colors: {
                         'primary': '#007bff',
