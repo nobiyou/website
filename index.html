@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="微信视频号下载工具">
-    <meta name="keywords" content="wx_channel, 视频号, 下载工具, 微信视频号下载">
+    <meta name="keywords" content="微信, 视频号, 下载工具, 微信视频号下载">
     <meta name="author" content="微信视频号下载工具">
     <title>微信视频号下载工具</title>
     <!-- Favicon Icon -->
-    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="icon" type="image/png" href="images/fav.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -338,15 +338,23 @@
                         </h4>
                         <div class="space-y-2">
                             <p class="text-blue-700">
+                                <strong>GitHub Releases：</strong>
+                                <a class="text-primary hover:underline font-medium"
+                                    href="https://github.com/nobiyou/wx_channel/releases" target="_blank">
+                                    https://github.com/nobiyou/wx_channel/releases
+                                </a>
+                            </p>
+                            <p class="text-blue-700">
                                 <strong>蓝奏云网盘：</strong>
                                 <a class="text-primary hover:underline font-medium"
                                     href="https://wwyp.lanzoul.com/b00zxv524h" target="_blank">
                                     https://wwyp.lanzoul.com/b00zxv524h
                                 </a>
+                                <span class="ml-2">提取密码：<span class="bg-blue-100 px-2 py-1 rounded font-mono text-sm">fton</span></span>
                             </p>
-                            <p class="text-blue-700">
-                                <strong>提取密码：</strong>
-                                <span class="bg-blue-100 px-2 py-1 rounded font-mono text-sm">fton</span>
+                            <p class="text-blue-700 text-sm mt-2">
+                                <strong>当前版本：</strong>v5.5.5 | 
+                                <strong>更新时间：</strong>2026-02-19
                             </p>
                         </div>
                     </div>
@@ -432,34 +440,34 @@
                 <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
                     <img class="mx-auto mb-6 w-20 h-20" src="image/f4.png" alt="">
                     <h5 class="text-xl font-semibold mb-4">Web控制台</h5>
-                    <p class="text-gray-600">提供现代化的Web控制台界面，支持浏览记录、下载管理、批量操作等功能</p>
+                    <p class="text-gray-600">提供现代化的Web控制台界面，支持浏览记录、下载管理、批量操作、数据导出等功能</p>
                 </div>
                 <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
                     <img class="mx-auto mb-6 w-20 h-20" src="image/f5.png" alt="">
                     <h5 class="text-xl font-semibold mb-4">批量下载</h5>
-                    <p class="text-gray-600">支持批量下载功能，可一次提交多个视频任务，支持断点续传和智能去重</p>
+                    <p class="text-gray-600">支持批量下载功能，使用Gopeed引擎，支持多线程下载、断点续传和智能去重</p>
                 </div>
                 <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
                     <img class="mx-auto mb-6 w-20 h-20" src="image/f6.png" alt="">
                     <h5 class="text-xl font-semibold mb-4">数据导出</h5>
-                    <p class="text-gray-600">支持导出下载记录和运营数据为CSV、JSON、Markdown格式，方便数据分析</p>
+                    <p class="text-gray-600">支持导出下载记录和运营数据为CSV、JSON、Markdown格式，方便数据分析和备份</p>
                 </div>
             </div>
             <div class="grid md:grid-cols-3 gap-8 mt-12">
                 <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
                     <img class="mx-auto mb-6 w-20 h-20" src="image/f1.png" alt="">
-                    <h5 class="text-xl font-semibold mb-4">缓存提示</h5>
-                    <p class="text-gray-600">针对长视频提供缓存进度显示，确保下载完整视频，避免下载不完整</p>
+                    <h5 class="text-xl font-semibold mb-4">高速下载</h5>
+                    <p class="text-gray-600">集成Gopeed下载引擎，支持多线程并发下载，下载速度提升10倍以上</p>
                 </div>
                 <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
                     <img class="mx-auto mb-6 w-20 h-20" src="image/f2.png" alt="">
                     <h5 class="text-xl font-semibold mb-4">智能去重</h5>
-                    <p class="text-gray-600">自动识别已下载的视频，避免重复下载，节省存储空间和下载时间</p>
+                    <p class="text-gray-600">基于视频ID自动识别已下载的视频，避免重复下载，节省存储空间和下载时间</p>
                 </div>
                 <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
                     <img class="mx-auto mb-6 w-20 h-20" src="image/f3.png" alt="">
-                    <h5 class="text-xl font-semibold mb-4">安全可靠</h5>
-                    <p class="text-gray-600">本地处理数据，不上传用户隐私，所有操作均在本地完成，安全可靠</p>
+                    <h5 class="text-xl font-semibold mb-4">数据库管理</h5>
+                    <p class="text-gray-600">使用SQLite数据库存储浏览记录和下载记录，支持高效查询和数据导出</p>
                 </div>
             </div>
         </div>
@@ -699,7 +707,7 @@
                         <img src="image/stats-download.svg" alt="下载量" class="w-full h-full"
                             onerror="this.onerror=null; this.src='image/f1.png';">
                     </div>
-                    <h1 class="text-4xl font-bold mb-2 text-white">20K+</h1>
+                    <h1 class="text-4xl font-bold mb-2 text-white">30K+</h1>
                     <p class="text-white opacity-90">累计下载量</p>
                 </div>
                 <div class="text-center animated-stat">
@@ -715,7 +723,7 @@
                         <img src="image/stats-speed.svg" alt="成功率" class="w-full h-full"
                             onerror="this.onerror=null; this.src='image/f3.png';">
                     </div>
-                    <h1 class="text-4xl font-bold mb-2 text-white">99%</h1>
+                    <h1 class="text-4xl font-bold mb-2 text-white">99.5%</h1>
                     <p class="text-white opacity-90">下载成功率</p>
                 </div>
                 <div class="text-center animated-stat">
@@ -723,7 +731,7 @@
                         <img src="image/stats-users.svg" alt="用户数" class="w-full h-full"
                             onerror="this.onerror=null; this.src='image/f4.png';">
                     </div>
-                    <h1 class="text-4xl font-bold mb-2 text-white">5K+</h1>
+                    <h1 class="text-4xl font-bold mb-2 text-white">8K+</h1>
                     <p class="text-white opacity-90">活跃用户数</p>
                 </div>
             </div>
@@ -1043,6 +1051,60 @@ upx --best wx_channel.exe</code></pre>
                 <div class="pt-4">
                     <h3 class="text-xl font-bold mb-4">版本更新历史</h3>
                     <div class="space-y-6">
+                        <!-- v5.5.5版本 - 最新版本 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1 rounded text-sm font-semibold">v5.5.5 最新版本</span>
+                                <span class="ml-2 text-xs text-gray-500">2026-02-19</span>
+                            </div>
+                            <ul class="space-y-1 text-gray-700 text-sm">
+                                <li class="flex items-start">
+                                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                                    <strong>集成Gopeed下载引擎</strong>：支持多线程并发下载，下载速度提升10倍以上
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                                    <strong>SQLite数据库</strong>：使用数据库存储浏览记录和下载记录，支持高效查询
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                                    <strong>Web控制台重构</strong>：全新的现代化界面，支持浏览记录、下载记录、下载队列管理
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                                    <strong>批量下载优化</strong>：支持并发下载、断点续传、智能去重、进度实时显示
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                                    <strong>数据导出功能</strong>：支持CSV、JSON、Markdown格式导出，方便数据分析
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                                    <strong>下载队列系统</strong>：支持任务排队、优先级管理、状态跟踪
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                                    <strong>智能去重机制</strong>：基于视频ID自动识别已下载视频，避免重复下载
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                                    <strong>API接口完善</strong>：提供RESTful API和WebSocket实时通信
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                                    修复批量下载进度显示问题，优化前端轮询机制
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                                    修复下载队列状态同步问题，自动检测已完成任务
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                                    优化WebSocket连接稳定性，解决context canceled问题
+                                </li>
+                            </ul>
+                        </div>
+
                         <!-- 5.2.11版本 -->
                         <div class="bg-gray-50 rounded-lg p-4">
                             <div class="flex items-center mb-2">
