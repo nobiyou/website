@@ -353,8 +353,8 @@
                                 <span class="ml-2">提取密码：<span class="bg-blue-100 px-2 py-1 rounded font-mono text-sm">fton</span></span>
                             </p>
                             <p class="text-blue-700 text-sm mt-2">
-                                <strong>当前版本：</strong>v5.5.5 | 
-                                <strong>更新时间：</strong>2026-02-19
+                                <strong>当前版本：</strong>v5.6.1 | 
+                                <strong>更新时间：</strong>2026-03-16
                             </p>
                         </div>
                     </div>
@@ -1051,56 +1051,52 @@ upx --best wx_channel.exe</code></pre>
                 <div class="pt-4">
                     <h3 class="text-xl font-bold mb-4">版本更新历史</h3>
                     <div class="space-y-6">
-                        <!-- v5.5.5版本 - 最新版本 -->
+                        <!-- v5.6.1版本 - 最新版本 -->
                         <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-lg p-4">
                             <div class="flex items-center mb-2">
-                                <span class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1 rounded text-sm font-semibold">v5.5.5 最新版本</span>
-                                <span class="ml-2 text-xs text-gray-500">2026-02-19</span>
+                                <span class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1 rounded text-sm font-semibold">v5.6.1 最新版本</span>
+                                <span class="ml-2 text-xs text-gray-500">2026-03-16</span>
                             </div>
                             <ul class="space-y-1 text-gray-700 text-sm">
                                 <li class="flex items-start">
                                     <span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                                    <strong>集成Gopeed下载引擎</strong>：支持多线程并发下载，下载速度提升10倍以上
+                                    <strong>Home详情页兼容</strong>：修复分享视频、个人页直达视频在 Home 路径下被误判为普通首页的问题
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                                    <strong>SQLite数据库</strong>：使用数据库存储浏览记录和下载记录，支持高效查询
+                                    <strong>下载按钮恢复</strong>：修复已成功获取视频信息但下载按钮灰色不可点击的问题
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                                    <strong>Web控制台重构</strong>：全新的现代化界面，支持浏览记录、下载记录、下载队列管理
+                                    <strong>评论采集恢复</strong>：修复 Home 路径详情页模式下“评论采集功能尚未就绪”的提示问题
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                                    <strong>批量下载优化</strong>：支持并发下载、断点续传、智能去重、进度实时显示
+                                    <strong>链接结构兼容</strong>：兼容 `oid/nid`、`context_id`、`fromSubPage=profile`、`tabId=flow + feed_lab` 等多种直达视频链接
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                                    <strong>数据导出功能</strong>：支持CSV、JSON、Markdown格式导出，方便数据分析
+                                    <strong>逻辑分流优化</strong>：对“URL 是 Home、实际是详情页”的场景自动切换到 Feed 逻辑处理
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                                    <strong>下载队列系统</strong>：支持任务排队、优先级管理、状态跟踪
+                                    延续 v5.6.0 对新版首页、Feed、Profile、赞和收藏页面的适配成果
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                                    <strong>智能去重机制</strong>：基于视频ID自动识别已下载视频，避免重复下载
+                                    延续新版评论侧栏兼容、自动打开评论区与完整采集能力
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                                    <strong>API接口完善</strong>：提供RESTful API和WebSocket实时通信
+                                    延续 Hub / WebSocket 页面能力识别与智能选设备优化
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                                    修复批量下载进度显示问题，优化前端轮询机制
+                                    雷达功能默认关闭，并支持控制台设置页即时启停
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                                    修复下载队列状态同步问题，自动检测已完成任务
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                                    优化WebSocket连接稳定性，解决context canceled问题
+                                    持续优化新版页面下的下载、评论、Hub 调用与整体稳定性
                                 </li>
                             </ul>
                         </div>
