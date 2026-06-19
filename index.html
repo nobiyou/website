@@ -695,9 +695,9 @@
 
                             <p class="text-blue-700 text-sm mt-2">
 
-                                <strong>当前版本：</strong>v5.6.2 |
+                                <strong>当前版本：</strong>v5.6.9 |
 
-                                <strong>更新时间：</strong>2026-04-26
+                                <strong>更新时间：</strong>2026-06-19
 
                             </p>
 
@@ -2082,15 +2082,15 @@ upx --best wx_channel.exe</code></pre>
 
                     <div class="space-y-6">
 
-                        <!-- v5.6.2版本 - 最新版本 -->
+                        <!-- v5.6.9版本 - 最新版本 -->
 
                         <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-lg p-4">
 
                             <div class="flex items-center mb-2">
 
-                                <span class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1 rounded text-sm font-semibold">v5.6.2 最新版本</span>
+                                <span class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1 rounded text-sm font-semibold">v5.6.9 最新版本</span>
 
-                                <span class="ml-2 text-xs text-gray-500">2026-04-26</span>
+                                <span class="ml-2 text-xs text-gray-500">2026-06-19</span>
 
                             </div>
 
@@ -2100,7 +2100,7 @@ upx --best wx_channel.exe</code></pre>
 
                                     <span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
 
-                                    <strong>搜索页清理</strong>：移除已下线的视频号搜索页面相关代码和文档说明
+                                    <strong>分段保存进度</strong>：评论导出过程中会先写入 `.partial.json` 检查点文件。
 
                                 </li>
 
@@ -2108,15 +2108,14 @@ upx --best wx_channel.exe</code></pre>
 
                                     <span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
 
-                                    <strong>API搜索保留</strong>：保留控制台和接口侧搜索能力，不影响现有搜索调用
-
+                                    <strong>自动刷新保护</strong>：导出评论期间临时锁住页面 15 分钟自动刷新，减少长任务被打断。
                                 </li>
 
                                 <li class="flex items-start">
 
                                     <span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
 
-                                    <strong>提交范围整理</strong>：放开 `web/` 目录提交限制，允许站点资源纳入版本管理
+                                    <strong>误报修复</strong>：后端已成功导出后，不再因为前端状态更新异常弹出失败提示。
 
                                 </li>
 
@@ -2124,7 +2123,7 @@ upx --best wx_channel.exe</code></pre>
 
                                     <span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
 
-                                    <strong>链接结构兼容</strong>：兼容 `oid/nid`、`context_id`、`fromSubPage=profile`、`tabId=flow + feed_lab` 等多种直达视频链接
+                                    <strong>成功提示增强</strong>：导出完成后直接展示一级评论数、回复数和总条数。
 
                                 </li>
 
@@ -2132,7 +2131,7 @@ upx --best wx_channel.exe</code></pre>
 
                                     <span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
 
-                                    <strong>逻辑分流优化</strong>：对“URL 是 Home、实际是详情页”的场景自动切换到 Feed 逻辑处理
+                                    <strong>版本展示同步</strong>：README、版本说明、About 页面与 Windows 文件版本信息统一更新到本次发布。
 
                                 </li>
 
@@ -2140,7 +2139,15 @@ upx --best wx_channel.exe</code></pre>
 
                                     <span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
 
-                                    延续 v5.6.0 对新版首页、Feed、Profile、赞和收藏页面的适配成果
+                                    中断时会保留已完成的评论结果，便于后续排查或重试。
+
+                                </li>
+
+                                <li class="flex items-start">
+
+                                    <span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+
+                                    成功和失败提示现在按真实链路分别展示，避免“导出成功但页面说失败”。
 
                                 </li>
 
@@ -2148,7 +2155,7 @@ upx --best wx_channel.exe</code></pre>
 
                                     <span class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
 
-                                    延续新版评论侧栏兼容、自动打开评论区与完整采集能力
+                                    长评论视频导出体验更稳，减少导出到一半被重置的情况。
 
                                 </li>
 
@@ -2156,7 +2163,7 @@ upx --best wx_channel.exe</code></pre>
 
                                     <span class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
 
-                                    延续 Hub / WebSocket 页面能力识别与智能选设备优化
+                                    保持现有评论列表 API 调用方式不变，不需要兼容旧参数。
 
                                 </li>
 
@@ -2164,7 +2171,7 @@ upx --best wx_channel.exe</code></pre>
 
                                     <span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
 
-                                    雷达功能默认关闭，并支持控制台设置页即时启停
+                                    雷达功能默认关闭，需要在 `config.yaml` 中显式开启并重启程序。
 
                                 </li>
 
@@ -2172,7 +2179,7 @@ upx --best wx_channel.exe</code></pre>
 
                                     <span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
 
-                                    持续优化新版页面下的下载、评论、Hub 调用与整体稳定性
+                                    持续优化新版页面下的评论导出、下载链路与整体稳定性。
 
                                 </li>
 
